@@ -1,7 +1,5 @@
 # Oasis Landing Page
 
-A modern landing page for Oasis - the AI-first client service platform for law firms and legal professionals.
-
 ## 🛠 Tech Stack
 
 - Next.js 15.1.5
