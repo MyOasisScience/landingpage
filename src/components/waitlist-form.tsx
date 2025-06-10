@@ -80,10 +80,10 @@ export default function WaitlistForm({
             <button 
               type="submit"
               className={`group relative px-8 py-2 rounded-full text-brand-50 font-medium
-                       bg-gradient-to-r from-brand-600 to-brand-500 
-                       hover:from-brand-500 hover:to-brand-400
-                       active:from-brand-700 active:to-brand-600 
-                       border border-brand-400/50
+                       bg-gradient-to-r from-teal-600 to-teal-500 
+                       hover:from-teal-500 hover:to-teal-400
+                       active:from-teal-700 active:to-teal-600 
+                       border border-teal-400/50
                        shadow-[0_4px_10px_rgba(0,0,0,0.15)] 
                        hover:shadow-[0_6px_15px_rgba(0,0,0,0.25)] 
                        active:shadow-[inset_0_2px_6px_rgba(0,0,0,0.3)]
@@ -101,7 +101,7 @@ export default function WaitlistForm({
                 className="absolute inset-0 border-t border-brand-50/20 rounded-full group-active:opacity-0"
               ></span>
               <span
-                className="absolute -inset-[1px] blur-sm bg-gradient-to-r from-brand-400/50 to-brand-500/50 opacity-0 
+                className="absolute -inset-[1px] blur-sm bg-gradient-to-r from-teal-400/50 to-teal-500/50 opacity-0 
                          group-hover:opacity-100 -z-10 group-active:opacity-0 transition-opacity"
               ></span>
             </button>

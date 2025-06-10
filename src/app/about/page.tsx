@@ -25,7 +25,7 @@ export default function About() {
           </h2>
           <p className="text-neutral-700 text-lg md:text-xl">
             Whether you&apos;re facing a contract, a dispute, or just need advice,
-            Lagels is here to help. Get answers fast, stay protected, and focus
+            Oasis is here to help. Get answers fast, stay protected, and focus
             on what matters most.
           </p>
         </div>

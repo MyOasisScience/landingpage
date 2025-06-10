@@ -1,6 +1,6 @@
-# Lagels Landing Page
+# Oasis Landing Page
 
-A modern landing page for Lagels - the AI-first client service platform for law firms and legal professionals.
+A modern landing page for Oasis - the AI-first client service platform for law firms and legal professionals.
 
 ## 🛠 Tech Stack
 
@@ -24,7 +24,7 @@ A modern landing page for Lagels - the AI-first client service platform for law 
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/lagels/landing-page.git
+git clone https://github.com/ScienceIsBroken/landingpage
 cd landing-page
 ```
 

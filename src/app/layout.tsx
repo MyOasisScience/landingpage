@@ -21,10 +21,6 @@ const lora = Lora({
   weight: ["400", "700"],
 });
 
-// export const metadata: Metadata = {
-//   title: "Lagels",
-//   description: "Lagels AI legal tech for client experience landing page",
-// };
 
 export default function RootLayout({
   children,
@@ -32,15 +28,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full bg-[#FBF8F4]">
+    <html lang="en" className="h-full bg-[#F0F5FF]">
       <head>
-      <UnicornScript />
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png" />
+        <link rel="manifest" href="/images/favicons/site.webmanifest" />
+        <UnicornScript />
       </head>
       <body
         className={cn(
           inter.variable,
           lora.variable,
-          "flex min-h-screen flex-col font-sans antialiased bg-gradient-to-b from-[#FBF8F4] to-[#EFE0CE]"
+          "flex min-h-screen flex-col font-sans antialiased bg-gradient-to-b from-[#F0F5FF] to-[#c7dbff]"
         )}
       >
         <Header />

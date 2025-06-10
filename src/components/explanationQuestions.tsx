@@ -6,11 +6,17 @@ import { PulseChip } from "./ui/PulseChip";
 
 // Precompute content to avoid recreating it on every render
 const textContent = [
-  "...We understand how daunting it can be to navigate your legal relationships.",
+  "Most science is locked away.",
   <br key="br1" />,
-  "We're here to ensure there's someone in your corner, without the costs or delays.",
+  "In PDFs, behind jargon, or buried in platforms built for researchers — not decision-makers.",
   <br key="br2" />,
-  "Lagels is for more time for life and less time stressing.",
+  "Meanwhile, you're left with...",
+  <br key="br3" />,
+  "• Hours lost searching or emailing experts",
+  <br key="br4" />,
+  "• Outdated info guiding big decisions",
+  <br key="br5" />,
+  "• Research you can't actually act on",
 ];
 
 // Memoize the entire component to prevent unnecessary re-renders
@@ -21,7 +27,7 @@ const ExplanationQuestions = memo(function ExplanationQuestions() {
       <div className="flex flex-col items-center gap-8">
         {/* Centered Chip */}
         <div className="flex justify-center mb-6">
-          <PulseChip text="Our promise" color="blue" />
+          <PulseChip text="The problem" color="blue" />
         </div>
 
         {/* Content */}

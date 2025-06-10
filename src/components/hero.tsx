@@ -24,15 +24,15 @@ export default function Hero() {
 
       {/* Blurred boxes - Repositioned to align with image */}
       <div
-        className="absolute bottom-[-5%] right-[5%] w-[25%] h-2/5 bg-[#2f2514] filter blur-[8rem] rotate-100 z-10"
+        className="absolute bottom-[-5%] right-[5%] w-[25%] h-2/5 bg-[#001244] filter blur-[8rem] rotate-100 z-10"
         aria-hidden="true"
       />
       <div
-        className="absolute bottom-[15%] right-[15%] w-[15%] h-1/6 bg-[#2f2514] filter blur-[5rem] rotate-[deg] z-10"
+        className="absolute bottom-[15%] right-[15%] w-[15%] h-1/6 bg-[#002371] filter blur-[5rem] rotate-[deg] z-10"
         aria-hidden="true"
       />
       <div
-        className="absolute bottom-[5%] right-[30%] w-[18%] h-1/5 bg-[#2f2514] filter blur-[7rem] z-10"
+        className="absolute bottom-[5%] right-[30%] w-[18%] h-1/5 bg-[#0038a8] filter blur-[7rem] z-10"
         aria-hidden="true"
       />
 
@@ -61,33 +61,9 @@ export default function Hero() {
 
       {/* Right image */}
       <div className="flex-1 w-full max-w-[85%] sm:max-w-sm md:max-w-md lg:max-w-xl relative z-10 flex items-end">
-        {/* Hero UI Image - Complex version for larger screens */}
-        <div className="absolute -top-15 -right-[15%] md:-right-[15%] w-[75%] sm:w-[80%] md:w-[85%] z-20 pointer-events-none hidden lg:block">
-          <Image
-            src="/images/heroui.png"
-            alt="Lagels interface"
-            width={500}
-            height={300}
-            priority
-            className="object-contain"
-          />
-        </div>
-        
-        {/* Hero UI Image - Simple version for smaller screens */}
-        <div className="absolute -top-15 -right-[25%] w-[75%] z-20 pointer-events-none block lg:hidden">
-          <Image
-            src="/images/herouisimple.png"
-            alt="Lagels interface simple"
-            width={400}
-            height={250}
-            priority
-            className="object-contain"
-          />
-        </div>
-        
         <div className="relative w-full aspect-square">
           <Image
-            src="/images/herowoman.png"
+            src="/images/herotree.png"
             alt="Hero illustration"
             fill
             priority

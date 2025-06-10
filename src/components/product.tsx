@@ -82,7 +82,7 @@ export default function Product() {
       <div className="w-full flex flex-col items-center mx-auto gap-8 max-w-6xl">
         {/* Centered header chip */}
         <div className="flex flex-col items-center text-center">
-          <PulseChip text="We're Different" color="green" />
+          <PulseChip text="Our product" color="green" />
         </div>
 
         {/* Content container */}
