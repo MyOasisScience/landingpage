@@ -4,6 +4,7 @@ import React from "react";
 import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
 import { useRef } from "react";
 import AnimatedText from "./animated-text";
+import Script from "next/script";
 
 const questions = [
   {
@@ -85,16 +86,14 @@ export default function ExplanationCard() {
     <section className="relative w-full mt-8 py-12 px-2 md:py-16">
       {/* Unicorn Studio Border Background - Full Width Backdrop */}
       <div className="absolute inset-0 w-full h-full z-0 pointer-events-none">
-        <div
-          className="unicorn-embed w-full h-full"
-          data-us-project="Lc1vntWoZEyvpGS2N7W0"
-          data-us-scale="1"
-          data-us-dpi="1.5"
-          data-us-lazyload="true"
-          data-us-disablemobile="true"
-          data-us-alttext="Explanation Card Border"
-          data-us-arialabel="Decorative border background"
-        ></div>
+        <div data-us-project="yb0tEBH5rJBVXDROMx24" className="w-full h-full"></div>
+        <Script
+          id="unicorn-studio-explanation"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `!function(){if(!window.UnicornStudio){window.UnicornStudio={isInitialized:!1};var i=document.createElement("script");i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.25/dist/unicornStudio.umd.js",i.onload=function(){window.UnicornStudio.isInitialized||(UnicornStudio.init(),window.UnicornStudio.isInitialized=!0)},(document.head || document.body).appendChild(i)}}();`
+          }}
+        />
       </div>
 
       {/* Centered Content Card */}

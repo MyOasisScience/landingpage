@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Script from "next/script";
 import WaitlistForm from "./waitlist-form";
 import { DotPattern } from "./ui/DotPattern";
 import { cn } from "@/lib/utils";
@@ -10,16 +11,14 @@ export default function Hero() {
     <div className="rounded-b-[5rem] relative w-full justify-center mx-auto lg:min-h-[80vh] flex flex-col items-center lg:flex-row lg:items-stretch gap-12 overflow-hidden pt-16 md:pt-20 px-4 sm:px-6 md:px-8 lg:px-12">
       {/* Unicorn Studio Background */}
       <div className="absolute inset-0 w-full h-full z-0 pointer-events-none">
-        <div
-          className="unicorn-embed w-full h-full"
-          data-us-project="Lc1vntWoZEyvpGS2N7W0"
-          data-us-scale="1"
-          data-us-dpi="1.5"
-          data-us-lazyload="true"
-          data-us-disablemobile="true"
-          data-us-alttext="Hero Background"
-          data-us-arialabel="Decorative background pattern"
-        ></div>
+        <div data-us-project="yb0tEBH5rJBVXDROMx24" className="w-full h-full"></div>
+        <Script
+          id="unicorn-studio"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `!function(){if(!window.UnicornStudio){window.UnicornStudio={isInitialized:!1};var i=document.createElement("script");i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.25/dist/unicornStudio.umd.js",i.onload=function(){window.UnicornStudio.isInitialized||(UnicornStudio.init(),window.UnicornStudio.isInitialized=!0)},(document.head || document.body).appendChild(i)}}();`
+          }}
+        />
       </div>
 
       {/* Blurred boxes - Repositioned to align with image */}
