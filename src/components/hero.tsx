@@ -46,14 +46,13 @@ export default function Hero() {
       {/* Left content */}
       <div className="flex-1 text-center lg:text-left lg:self-center max-w-xl relative z-10 mt-4 md:mt-0">
         <h1 className="font-logo text-4xl sm:text-5xl lg:text-6xl font-medium text-brand-800">
-          <i className="font-medium">Fair</i> and{" "}
-          <strong className="font-semibold">simple</strong> legal support.
+          Turn Cutting-Edge Science Into{" "}
+          <strong className="font-semibold">Clear, Actionable Strategy</strong>
         </h1>
         <p className="text-lg text-brand-800 mb-8">
           <br />
           <br />
-          From contracts to key life moments, we help you take control—with
-          calm, confident guidance every step of the way.
+          For policy teams, startups, and comms professionals who need fast, reliable research they can actually use - without wading through PDFs.
         </p>
         <div className="max-w-md mx-auto lg:mx-0">
           <WaitlistForm />

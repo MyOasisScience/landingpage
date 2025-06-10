@@ -6,20 +6,20 @@ import { PulseChip } from "./ui/PulseChip";
 
 const features = [
   {
-    title: "A lawyer in the loop",
-    desc: "Lagels brings lawyers into the process only when their input is essential—cutting the cost, not the quality. Our platform streamlines communication, reduces admin, and keeps lawyers focused on what matters most: their expertise.",
+    title: "Bespoke Scientific Reports",
+    desc: "Tailored to your question, goal, or campaign. Get research that's specifically designed for your needs.",
   },
   {
-    title: "Trained by legal minds, for real needs",
-    desc: "Our AI isn't just smart—it's informed. Every workflow and piece of guidance is shaped by legal experts, embedding their knowledge directly into the system. That means the support you get is grounded in real-world practice, not just generic answers.",
+    title: "Research Summaries You Can Search",
+    desc: "Curated insights from papers, preprints, even Reddit. All searchable and organized for easy access.",
   },
   {
-    title: "Legal care that's proactive, not just reactive",
-    desc: "Just like health checkups, Lagels keeps an eye on your legal wellbeing—flagging risks, reminding you of deadlines, and guiding you through important decisions before issues arise. It's preventative legal care designed to keep your rights protected and your stress levels low.",
+    title: "Ask Us Anything",
+    desc: "Get direct support or request custom briefs. Our team is here to help you get the answers you need.",
   },
   {
-    title: "Keep your data between you and your lawyer",
-    desc: "Lagels is built to protect your data. We don't sell your information to third parties, and we don't use it to train our AI. Your private information always stays only between you and who you choose.",
+    title: "Connect to Experts",
+    desc: "Behind-the-scenes access to the scientists behind the work. Build relationships with the experts who matter.",
   },
 ];
 

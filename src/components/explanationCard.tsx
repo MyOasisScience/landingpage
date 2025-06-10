@@ -7,18 +7,33 @@ import AnimatedText from "./animated-text";
 
 const questions = [
   {
-    text: "What's the deadline to submit my application?",
+    text: "What's the latest research on climate adaptation?",
     color: "bg-blue-400",
   },
-  { text: "How should I respond to this letter?", color: "bg-yellow-400" },
+  { 
+    text: "How do I validate this health claim?", 
+    color: "bg-yellow-400" 
+  },
   {
-    text: "Am I entitled to payment in this situation?",
+    text: "What's the science behind this behavior?",
     color: "bg-green-500",
   },
-  { text: "Is this a fair deal?", color: "bg-pink-400" },
-  { text: "What are my rights if I get a contract?", color: "bg-purple-500" },
-  { text: "How do I protect myself in a dispute?", color: "bg-orange-400" },
-  { text: "What should I do if I get a legal notice?", color: "bg-gray-500" },
+  { 
+    text: "Is this technology ready for market?", 
+    color: "bg-pink-400" 
+  },
+  { 
+    text: "What do experts say about this policy?", 
+    color: "bg-purple-500" 
+  },
+  { 
+    text: "How do I find relevant research?", 
+    color: "bg-orange-400" 
+  },
+  { 
+    text: "Can you summarize this paper?", 
+    color: "bg-gray-500" 
+  },
 ];
 
 // Separate component for each question bubble to fix hooks rule violation

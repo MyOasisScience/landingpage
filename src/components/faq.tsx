@@ -15,66 +15,45 @@ interface FaqAccordionProps {
 const questions = [
   {
     id: "item-1",
-    question: "Who is Lagels for?",
+    question: "What kinds of topics can I ask about?",
     answer: (
       <>
         <p>
-          We&apos;ve built Lagels as a single platform for all your legal needs,
-          starting with a tailored solution for sole traders and
-          micro-companies. As we grow, Lagels will expand to support a diverse
-          set of legal needs for individuals and small businesses.
-        </p>
-        <p className="mt-4">
-          If you have a particular legal issue you&apos;re needing assistance with,
-          we&apos;d love to hear from you! Contact us at{" "}
-          <a href="mailto:hello@lagels.com" className="text-brand-400">
-            hello@lagels.com
-          </a>
-          , and{" "}
-          <a href="https://x.com/trylagels" className="text-brand-400">
-            follow us on socials
-          </a>{" "}
-          for the latest updates.
+          Anything with a scientific angle: climate, behavior, health, tech, and more.
         </p>
       </>
     ),
   },
   {
     id: "item-2",
-    question: "Have we released our product yet?",
+    question: "How fast is turnaround?",
     answer: (
       <>
-        Legal support can be sensitive, so it&apos;s critical for us to get the
-        product right. We&apos;re now working to refine the platform. Be the first to
-        know when we launch by{" "}
-        <a href="#signup" className="text-brand-400">
-          registering for the beta.
-        </a>
+        <p>
+          Basic briefs in 2–4 days. Deeper consulting by request.
+        </p>
       </>
     ),
   },
   {
     id: "item-3",
-    question: "What's the pricing?",
+    question: "Who writes the briefs?",
     answer: (
       <>
-        At Lagels, we empower our clients with flexible pricing options tailored
-        to their needs, ensuring anyone can access top-quality legal support. We&apos;ll be considering both subscription and pay-as-you-go models, with the goal of ensuring our platform can be accessible to everyone.
+        <p>
+          We blend AI with expert editors. Every report is reviewed by a human.
+        </p>
       </>
     ),
   },
   {
     id: "item-4",
-    question: "I'm a legal professional. How can I get involved?",
+    question: "Can I try it before subscribing?",
     answer: (
       <>
-        We&apos;re looking for forward-thinking legal professionals to join our
-        beta program. Your insights will help shape the future of legal
-        services. If you&apos;re interested in being part of this journey,{" "}
-        <a href="#signup" className="text-brand-400">
-          Join the beta
-        </a>{" "}
-        or reach out to us directly.
+        <p>
+          Yes! Start with the free TikTok digest or join the early access list for samples.
+        </p>
       </>
     ),
   },
