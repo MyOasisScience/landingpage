@@ -36,7 +36,7 @@ export default function RootLayout({
         className={cn(
           inter.variable,
           lora.variable,
-          "flex min-h-screen flex-col font-sans antialiased bg-gradient-to-b from-[#F0F5FF] to-[#c7dbff]"
+          "flex min-h-screen flex-col font-sans antialiased bg-[#F3F2ED]"
         )}
       >
         <Header />

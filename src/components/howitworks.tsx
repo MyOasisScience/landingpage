@@ -4,35 +4,31 @@ import React, { useRef, useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { PulseChip } from "./ui/PulseChip";
 
-const features = [
+const steps = [
   {
-    title: "Bespoke Scientific Reports",
-    desc: "Tailored to your question, goal, or campaign. Get research that's specifically designed for your needs.",
+    title: "Tell us about your work",
+    desc: "Share your current focus, your tech stack, and what you're interested in.",
   },
   {
-    title: "Research Summaries You Can Search",
-    desc: "Curated insights from papers, preprints, even Reddit. All searchable and organized for easy access.",
+    title: "We research for you",
+    desc: "Each week, we curate a custom report just for you, drawing from breakthrough scientific research, industry & corporate developments, and new tech tools and releases.",
   },
   {
-    title: "Ask Us Anything",
-    desc: "Get direct support or request custom briefs. Our team is here to help you get the answers you need.",
-  },
-  {
-    title: "Connect to Experts",
-    desc: "Behind-the-scenes access to the scientists behind the work. Build relationships with the experts who matter.",
+    title: "You get a weekly report",
+    desc: "Actionable summaries with direct links to explore further.",
   },
 ];
 
 // Find the description with the most text to determine maximum height
-const longestDesc = features.reduce(
+const longestDesc = steps.reduce(
   (longest, current) =>
     current.desc.length > longest.length ? current.desc : longest,
-  features[0].desc
+  steps[0].desc
 );
 
-export default function Product() {
+export default function HowItWorks() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const sectionRefs = useRef<(HTMLDivElement | null)[]>(Array(features.length).fill(null));
+  const sectionRefs = useRef<(HTMLDivElement | null)[]>(Array(steps.length).fill(null));
   const [activeIndex, setActiveIndex] = useState<number>(0);
   
   // Calculate active section directly from scroll position
@@ -82,30 +78,30 @@ export default function Product() {
       <div className="w-full flex flex-col items-center mx-auto gap-8 max-w-6xl">
         {/* Centered header chip */}
         <div className="flex flex-col items-center text-center">
-          <PulseChip text="Our product" color="green" />
+          <PulseChip text="How it works" color="green" />
         </div>
 
         {/* Content container */}
         <div ref={containerRef}>
-          {features.map((feature, index) => {
+          {steps.map((step, index) => {
             const isActive = activeIndex === index;
             
             return (
               <div 
                 key={index}
                 ref={(el) => { sectionRefs.current[index] = el; }}
-                className="mb-16 last:mb-12"
+                className="mb-8 last:mb-6"
               >
                 <div className="md:flex md:gap-12">
-                  {/* Feature title - right aligned */}
-                  <div className={`md:w-1/2 py-6 transition-colors duration-300 md:text-right ${isActive ? 'text-neutral-900' : 'text-neutral-300'}`}>
+                  {/* Step title - right aligned */}
+                  <div className={`md:w-1/2 py-3 transition-colors duration-300 md:text-right ${isActive ? 'text-neutral-900' : 'text-neutral-300'}`}>
                     <h3 className="font-logo text-3xl md:text-4xl transition-colors duration-500">
-                      {feature.title}
+                      {step.title}
                     </h3>
                   </div>
                   
-                  {/* Feature description - desktop and mobile versions */}
-                  <div className="md:w-1/2 py-6">
+                  {/* Step description - desktop and mobile versions */}
+                  <div className="md:w-1/2 py-3">
                     {/* Desktop version - fixed height container with animation */}
                     <div className="hidden md:block md:h-32">
                       <AnimatePresence mode="wait">
@@ -116,7 +112,7 @@ export default function Product() {
                             exit={{ opacity: 0, x: -30 }}
                             transition={{ duration: 0.4, ease: "easeInOut" }}
                           >
-                            <p className="text-neutral-800 pr-4">{feature.desc}</p>
+                            <p className="text-neutral-800 pr-4 whitespace-pre-line">{step.desc}</p>
                           </motion.div>
                         )}
                       </AnimatePresence>
@@ -139,7 +135,7 @@ export default function Product() {
                               exit={{ opacity: 0 }}
                               transition={{ duration: 0.3 }}
                             >
-                              <p className="text-neutral-800">{feature.desc}</p>
+                              <p className="text-neutral-800 whitespace-pre-line">{step.desc}</p>
                             </motion.div>
                           )}
                         </AnimatePresence>
@@ -154,4 +150,4 @@ export default function Product() {
       </div>
     </section>
   );
-}
+} 

@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Script from "next/script";
 import WaitlistForm from "./waitlist-form";
-import { DotPattern } from "./ui/DotPattern";
 import { cn } from "@/lib/utils";
 
 declare global {
@@ -41,7 +40,7 @@ export default function Hero() {
   };
 
   return (
-    <div className="rounded-b-[5rem] relative w-full justify-center mx-auto lg:min-h-[80vh] flex flex-col items-center lg:flex-row lg:items-stretch gap-12 overflow-hidden pt-16 md:pt-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#F3F2ED]">
+    <div className="rounded-b-[5rem] relative w-full mx-auto lg:min-h-[80vh] flex flex-col items-start lg:flex-row lg:items-stretch gap-12 overflow-hidden pt-24 md:pt-32 lg:pt-40 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#F3F2ED]">
       {/* Unicorn Studio Background */}
       <div className="absolute inset-0 w-full h-full z-0 pointer-events-none">
         <div id="hero-unicorn" className="w-full h-full" />
@@ -53,15 +52,8 @@ export default function Hero() {
         />
       </div>
 
-      {/* Background Pattern */}
-      <DotPattern
-        className={cn(
-          "[mask-image:radial-gradient(1000px_circle_at_center,white,transparent)]"
-        )}
-      />
-
       {/* Content */}
-      <div className="flex-1 text-center lg:text-left lg:self-center max-w-xl relative z-10 mt-4 md:mt-0">
+      <div className="flex-1 text-left max-w-xl relative z-10 mt-4 md:mt-0 lg:ml-[10%]">
         <h1 className="font-logo text-4xl sm:text-5xl lg:text-6xl font-medium text-[#2B3D3B]">
           Turn Cutting-Edge Science Into{" "}
           <strong className="font-semibold">Clear, Actionable Strategy</strong>
@@ -69,9 +61,9 @@ export default function Hero() {
         <p className="text-lg text-[#444444] mb-8">
           <br />
           <br />
-          For policy teams, startups, and comms professionals who need fast, reliable research they can actually use - without wading through PDFs.
+          Get bespoke scientific, industry, and policy briefings, tailored to your goals, delivered directly to your inbox.
         </p>
-        <div className="max-w-md mx-auto lg:mx-0">
+        <div className="max-w-md">
           <WaitlistForm />
         </div>
       </div>

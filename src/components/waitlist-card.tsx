@@ -3,7 +3,7 @@ import { PulseChip } from "./ui/PulseChip";
 
 export function WaitlistCard() {
   return (
-    <div className="relative max-w-7xl mx-auto w-[calc(100%-1rem)] sm:w-full px-2 sm:px-4 sm:my-24 rounded-3xl overflow-hidden">
+    <div className="relative max-w-7xl mx-auto w-[calc(100%-1rem)] sm:w-full px-2 sm:px-4 sm:my-8 rounded-3xl overflow-hidden">
       {/* Card Content */}
       <div className="relative z-10 p-8 md:p-12 rounded-3xl">
         {/* Status Chip */}
