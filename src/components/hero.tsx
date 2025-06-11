@@ -60,7 +60,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="flex-1 text-left max-w-xl relative z-10 mt-4 md:mt-0 lg:ml-[10%]">
+      <div className="flex-1 text-left max-w-xl relative z-10 mt-4 md:mt-0 lg:ml-[10%] bg-white/80 backdrop-blur-sm p-6 rounded-lg">
         <h1 className="font-logo text-4xl sm:text-5xl lg:text-6xl font-medium text-[#2B3D3B]">
           Turn Cutting-Edge Science Into{" "}
           <strong className="font-semibold">Clear, Actionable Strategy</strong>
