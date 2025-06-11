@@ -61,7 +61,7 @@ export default function WaitlistForm({
       <input
         type="hidden"
         name="access_key"
-        value="27606b18-047a-410a-94c5-49a494730ed1"
+        value={process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "27606b18-047a-410a-94c5-49a494730ed1"}
       />
       <input type="hidden" name="subject" value="Demo Request" />
 
