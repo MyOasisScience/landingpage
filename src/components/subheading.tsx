@@ -17,7 +17,7 @@ const Subheading = memo(function Subheading() {
         {/* Content */}
         <div className="w-full">
           <TextReveal 
-            className="font-sans text-3xl md:text-5xl justify-center font-medium tracking-tight text-neutral-900 max-w-2xl md:max-w-3xl leading-tight mx-auto text-center"
+            className="font-sans text-2xl md:text-4xl justify-center font-medium tracking-tight text-neutral-900 max-w-2xl md:max-w-3xl leading-tight mx-auto text-center"
           >
             {textContent}
           </TextReveal>

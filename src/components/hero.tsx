@@ -61,17 +61,26 @@ export default function Hero() {
 
       {/* Content */}
       <div className="flex-1 text-center lg:text-left max-w-xl relative z-10 mt-4 md:mt-0 lg:ml-[10%] p-6 rounded-lg mx-auto lg:mx-0 w-[90%] lg:w-auto">
-        <h1 className="font-logo text-4xl sm:text-5xl lg:text-6xl font-medium text-[#2B3D3B]">
-          Want to keep on top of the latest science in your area?
+        <h1 className="font-logo text-3xl sm:text-4xl lg:text-5xl font-medium text-[#2B3D3B]">
+          Want to keep on top of the latest science in your field?
         </h1>
-        <p className="text-lg text-[#444444] mb-8">
+        <p className="text-base text-[#444444] mb-8">
           <br />
           <br />
           Get bespoke scientific, industry, and policy briefings, tailored to your goals, delivered directly to your inbox.
         </p>
-        <div className="max-w-md">
+        <div className="max-w-md relative">
           <WaitlistForm />
         </div>
+      </div>
+
+      {/* Oasis Query Text */}
+      <div className="absolute right-8 text-xs text-[#444444] font-mono text-right
+        bottom-4
+        [@media(max-width:1021px)]:top-[calc(100%+1rem)]">
+        oasis.query --region "EU" --topic "AI in genomics"
+        <br />
+        ✔︎ Summary generated. Check your inbox
       </div>
     </div>
   );

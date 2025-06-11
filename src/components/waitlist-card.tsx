@@ -13,10 +13,10 @@ export function WaitlistCard() {
 
         {/* Heading */}
         <div className="text-center mb-8">
-          <h2 className="font-logo text-4xl md:text-5xl font-medium mb-4 tracking-tighter">
+          <h2 className="font-logo text-2xl md:text-4xl font-medium mb-4 tracking-tighter">
             Get science you can use. Without the noise.
           </h2>
-          <p className="text-neutral-700 text-lg">
+          <p className="text-neutral-700 text-base">
             Join the waitlist for early access to our scientific briefings platform.
           </p>
         </div>

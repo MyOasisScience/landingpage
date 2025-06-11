@@ -6,7 +6,7 @@ import { PulseChip } from "./ui/PulseChip";
 
 const steps = [
   {
-    title: "Tell us about your work",
+    title: "Tell us what you’re working on",
     desc: "Share your current focus, your tech stack, and what you're interested in.",
   },
   {
@@ -78,7 +78,7 @@ export default function HowItWorks() {
       <div className="w-full flex flex-col items-center mx-auto gap-8 max-w-6xl">
         {/* Centered header chip */}
         <div className="flex flex-col items-center text-center">
-          <PulseChip text="How it works" color="green" />
+          <PulseChip text="How MyOasis.science works" color="green" />
         </div>
 
         {/* Content container */}
