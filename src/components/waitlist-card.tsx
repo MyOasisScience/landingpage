@@ -8,7 +8,7 @@ export function WaitlistCard() {
       <div className="relative z-10 p-8 md:p-12 rounded-3xl">
         {/* Status Chip */}
         <div className="flex justify-center mb-8">
-          <PulseChip text="Coming soon" color="orange" />
+          <PulseChip text="Coming soon" />
         </div>
 
         {/* Heading */}

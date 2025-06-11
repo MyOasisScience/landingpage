@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export function Footer() {
   return (
     <footer className="font-mono relative bg-[#F3F2ED] text-brand-50 border-t border-brand-300/20 py-6">

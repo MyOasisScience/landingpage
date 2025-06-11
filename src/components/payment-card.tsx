@@ -7,7 +7,7 @@ export function PaymentCard() {
       <div className="relative z-10 p-8 md:p-12 rounded-3xl">
         {/* Status Chip */}
         <div className="flex justify-center mb-8">
-          <PulseChip text="Limited time offer" color="orange" />
+          <PulseChip text="Limited time offer" />
         </div>
 
         {/* Heading */}

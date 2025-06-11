@@ -78,7 +78,7 @@ export default function Hero() {
       <div className="absolute right-8 text-xs text-[#444444] font-mono text-right
         bottom-4
         [@media(max-width:1021px)]:top-[calc(100%+1rem)]">
-        oasis.query --region "EU" --topic "AI in genomics"
+        oasis.query --region &quot;EU&quot; --topic &quot;AI in genomics&quot;
         <br />
         ✔︎ Summary generated. Check your inbox
       </div>

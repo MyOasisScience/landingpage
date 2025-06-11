@@ -2,11 +2,10 @@ import React from 'react';
 
 type PulseChipProps = {
   text: string;
-  color: 'blue' | 'orange' | 'green';
   className?: string;
 };
 
-export function PulseChip({ text, color, className = '' }: PulseChipProps) {
+export function PulseChip({ text, className = '' }: PulseChipProps) {
   // Always use neon green for the dot
   const neonGreen = '#C6FF00';
 
