@@ -4,8 +4,8 @@
 
 /* Font configuration using CSS variables from next/font */
 @theme inline {
-  --font-sans: var(--font-inter);
-  --font-logo: var(--font-lora);
+  --font-sans: var(--font-space-mono);
+  --font-logo: var(--font-space-mono);
   /* Optionally, map --font-serif as well if needed elsewhere */
   /* --font-serif: var(--font-lora); */ 
 }

@@ -25,7 +25,7 @@ export default function Header() {
                 priority
               />
             </div>
-            <h1 className="font-logo font-medium text-3xl ml-1">Oasis</h1>
+            <h1 className="font-logo font-medium text-3xl ml-1">MyOasis.science</h1>
           </Link>
 
           {/* Hamburger icon - visible on small screens, hidden on md+ */}
@@ -47,10 +47,10 @@ export default function Header() {
             {/* <NavLink href="/lawyers">For Lawyers</NavLink> */}
             <Link href="/#waitlist" className="outline-none">
               <button 
-                className="group relative px-8 py-2 rounded-full text-brand-50 font-medium
-                    bg-[#3A86FF] hover:bg-[#2B75E5]
-                    active:bg-[#1A65D4]
-                    border border-[#3A86FF]/50
+                className="group relative px-8 py-2 rounded-full text-[#2B3D3B] font-medium
+                    bg-[#C6FF00] hover:bg-[#B2E600]
+                    active:bg-[#9ECC00]
+                    border border-[#C6FF00]/50
                     shadow-[0_4px_10px_rgba(0,0,0,0.15)] 
                     hover:shadow-[0_6px_15px_rgba(0,0,0,0.25)] 
                     active:shadow-[inset_0_2px_6px_rgba(0,0,0,0.3)]
@@ -68,7 +68,7 @@ export default function Header() {
                   className="absolute inset-0 border-t border-white/20 rounded-full group-active:opacity-0"
                 ></span>
                 <span
-                  className="absolute -inset-[1px] blur-sm bg-gradient-to-r from-[#3A86FF]/50 to-[#2B75E5]/50 opacity-0 
+                  className="absolute -inset-[1px] blur-sm bg-gradient-to-r from-[#C6FF00]/50 to-[#B2E600]/50 opacity-0 
                           group-hover:opacity-100 -z-10 group-active:opacity-0 transition-opacity"
                 ></span>
               </button>
@@ -84,10 +84,10 @@ export default function Header() {
             {/* <NavLink href="/lawyers" className="text-sm">For Lawyers</NavLink> */}
             <Link href="/#waitlist" className="w-full">
               <button 
-                className="group relative w-full px-8 py-2 rounded-full text-brand-50 font-medium
-                    bg-[#3A86FF] hover:bg-[#2B75E5]
-                    active:bg-[#1A65D4]
-                    border border-[#3A86FF]/50
+                className="group relative w-full px-8 py-2 rounded-full text-[#2B3D3B] font-medium
+                    bg-[#C6FF00] hover:bg-[#B2E600]
+                    active:bg-[#9ECC00]
+                    border border-[#C6FF00]/50
                     shadow-[0_4px_10px_rgba(0,0,0,0.15)] 
                     hover:shadow-[0_6px_15px_rgba(0,0,0,0.25)] 
                     active:shadow-[inset_0_2px_6px_rgba(0,0,0,0.3)]
@@ -105,7 +105,7 @@ export default function Header() {
                   className="absolute inset-0 border-t border-white/20 rounded-full group-active:opacity-0"
                 ></span>
                 <span
-                  className="absolute -inset-[1px] blur-sm bg-gradient-to-r from-[#3A86FF]/50 to-[#2B75E5]/50 opacity-0 
+                  className="absolute -inset-[1px] blur-sm bg-gradient-to-r from-[#C6FF00]/50 to-[#B2E600]/50 opacity-0 
                           group-hover:opacity-100 -z-10 group-active:opacity-0 transition-opacity"
                 ></span>
               </button>

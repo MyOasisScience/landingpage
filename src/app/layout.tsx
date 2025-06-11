@@ -1,19 +1,14 @@
 'use client'
 
 // import type { Metadata } from "next";
-import { Inter, Lora } from "next/font/google";
+import { Space_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 import { Footer } from "@/components/footer";
 import { cn } from "@/lib/utils";
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
-
-const lora = Lora({
-  variable: "--font-lora",
+const spaceMono = Space_Mono({
+  variable: "--font-space-mono",
   subsets: ["latin"],
   weight: ["400", "700"],
 });
@@ -33,8 +28,7 @@ export default function RootLayout({
       </head>
       <body
         className={cn(
-          inter.variable,
-          lora.variable,
+          spaceMono.variable,
           "flex min-h-screen flex-col font-sans antialiased bg-[#F3F2ED]"
         )}
       >

@@ -44,10 +44,10 @@ export function PaymentCard() {
             href="https://buy.stripe.com/6oUbJ06TTbyf52BcRU1ck00"
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative px-8 py-3 rounded-full text-white font-medium
-                     bg-[#3A86FF] hover:bg-[#2B75E5]
-                     active:bg-[#1A65D4]
-                     border border-[#3A86FF]/50
+            className="group relative px-8 py-3 rounded-full text-[#2B3D3B] font-medium
+                     bg-[#C6FF00] hover:bg-[#B2E600]
+                     active:bg-[#9ECC00]
+                     border border-[#C6FF00]/50
                      shadow-[0_4px_10px_rgba(0,0,0,0.15)] 
                      hover:shadow-[0_6px_15px_rgba(0,0,0,0.25)] 
                      active:shadow-[inset_0_2px_6px_rgba(0,0,0,0.3)]
@@ -65,7 +65,7 @@ export function PaymentCard() {
               className="absolute inset-0 border-t border-white/20 rounded-full group-active:opacity-0"
             ></span>
             <span
-              className="absolute -inset-[1px] blur-sm bg-gradient-to-r from-[#3A86FF]/50 to-[#2B75E5]/50 opacity-0 
+              className="absolute -inset-[1px] blur-sm bg-gradient-to-r from-[#C6FF00]/50 to-[#B2E600]/50 opacity-0 
                        group-hover:opacity-100 -z-10 group-active:opacity-0 transition-opacity"
             ></span>
           </a>

@@ -25,7 +25,6 @@ export function WaitlistCard() {
         <WaitlistForm 
           containerClassName="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
           inputClassName="flex-1"
-          buttonClassName="w-full sm:w-auto bg-brand-600 hover:bg-brand-700 text-brand-50"
         />
       </div>
     </div>
