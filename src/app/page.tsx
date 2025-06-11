@@ -3,12 +3,13 @@ import "react-tooltip/dist/react-tooltip.css";
 import { WaitlistCard } from "@/components/waitlist-card";
 import Hero from "@/components/hero";
 import HowItWorks from "@/components/howitworks";
-import Subheading from "@/components/subheading";
+import ClientSubheadingWrapper from "@/components/ClientSubheadingWrapper";
+
 export default function Home() {
   return (
     <div className="w-full z-10">
       <Hero />
-      <Subheading />
+      <ClientSubheadingWrapper />
       <AnimatedText>
         <HowItWorks />
       </AnimatedText>

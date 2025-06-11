@@ -1,23 +1,31 @@
 "use client";
 
-import { useState } from "react";
 import Script from "next/script";
 import WaitlistForm from "./waitlist-form";
-import { cn } from "@/lib/utils";
+
+interface UnicornStudioOptions {
+  elementId: string;
+  filePath: string;
+  scale: number;
+  dpi: number;
+  lazyLoad: boolean;
+  production: boolean;
+  interactivity: {
+    mouse: { disableMobile: boolean };
+  };
+}
 
 declare global {
   interface Window {
     UnicornStudio?: {
-      init: () => Promise<any>;
+      init: () => Promise<void>;
       destroy: () => void;
-      addScene: (opts: any) => Promise<any>;
+      addScene: (opts: UnicornStudioOptions) => Promise<void>;
     };
   }
 }
 
 export default function Hero() {
-  const [studioLoaded, setStudioLoaded] = useState(false);
-
   const handleScriptLoad = async () => {
     if (typeof window === "undefined" || !window.UnicornStudio) return;
 
@@ -33,7 +41,6 @@ export default function Hero() {
           mouse: { disableMobile: true },
         },
       });
-      setStudioLoaded(true);
     } catch (error) {
       console.error("Unicorn Studio scene init failed:", error);
     }
