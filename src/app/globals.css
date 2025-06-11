@@ -11,13 +11,20 @@
 }
 
 @theme {
-  /* --font-sans: var(--font-inter); */
-  /* --font-logo: var(--font-lora); */
-  /* --font-serif: var(--font-logo); */
+  /* Base colors */
+  --color-background: #F3F2ED;  /* Soft Sand */
+  --color-text: #444444;        /* Graphite Gray */
+  --color-heading: #2B3D3B;     /* Deep Forest Green */
+  --color-accent: #3A86FF;      /* Oasis Blue */
+  --color-secondary: #A7DAD8;   /* Mint */
   
-  --color-background: hsl(var(--background));
-  --color-foreground: hsl(var(--foreground));
-
+  /* Map to existing color system */
+  --background: 45 33% 95%;     /* Soft Sand */
+  --foreground: 0 0% 27%;       /* Graphite Gray */
+  --primary: 180 30% 25%;       /* Deep Forest Green */
+  --secondary: 177 40% 80%;     /* Mint */
+  --accent: 217 100% 61%;       /* Oasis Blue */
+  
   --color-brand-50: oklch(var(--brand-50));
   --color-brand-100: oklch(var(--brand-100));
   --color-brand-200: oklch(var(--brand-200));
@@ -638,8 +645,8 @@
   }
 
   body {
-    background-color: oklch(var(--background));
-    color: oklch(var(--foreground));
+    background-color: var(--color-background);
+    color: var(--color-text);
     border-color: oklch(var(--border));
   }
 }
@@ -647,8 +654,8 @@
 @layer theme {
   :root {
     /* Base colors */
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
+    --background: 45 33% 95%;
+    --foreground: 0 0% 27%;
 
     /* Gray Colors - Exact matches from design */
     --gray-900: 41.85% 0.018 34.5;    /* #696764 */
@@ -722,13 +729,13 @@
     --card-foreground: var(--neutral-900);
     --popover: var(--background);
     --popover-foreground: var(--foreground);
-    --primary: var(--brand-600);
+    --primary: 180 30% 25%;
     --primary-foreground: var(--brand-100);
-    --secondary: var(--neutral-200);
+    --secondary: 177 40% 80%;
     --secondary-foreground: var(--neutral-900);
     --muted: var(--neutral-200);
     --muted-foreground: var(--neutral-700);
-    --accent: var(--brand-200);
+    --accent: 217 100% 61%;
     --accent-foreground: var(--brand-900);
     --destructive: var(--error-600);
     --destructive-foreground: var(--error-100);

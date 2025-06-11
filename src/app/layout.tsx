@@ -6,9 +6,7 @@ import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import Header from "@/components/header";
 import { Footer } from "@/components/footer";
-import UnicornScript from "@/components/unicornscript";
 import { cn } from "@/lib/utils";
-
 
 const inter = Inter({
   variable: "--font-inter",
@@ -20,7 +18,6 @@ const lora = Lora({
   subsets: ["latin"],
   weight: ["400", "700"],
 });
-
 
 export default function RootLayout({
   children,
@@ -34,7 +31,6 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png" />
         <link rel="manifest" href="/images/favicons/site.webmanifest" />
-        <UnicornScript />
       </head>
       <body
         className={cn(

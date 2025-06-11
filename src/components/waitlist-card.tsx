@@ -1,21 +1,9 @@
 import WaitlistForm from "./waitlist-form";
 import { PulseChip } from "./ui/PulseChip";
-import Script from "next/script";
 
 export function WaitlistCard() {
   return (
     <div className="relative max-w-7xl mx-auto w-[calc(100%-1rem)] sm:w-full px-2 sm:px-4 sm:my-24 rounded-3xl overflow-hidden">
-      {/* Unicorn Studio Background */}
-      <div className="absolute inset-0 w-full h-full z-0 pointer-events-none">
-        <div data-us-project="yb0tEBH5rJBVXDROMx24" className="w-full h-full"></div>
-        <Script
-          id="unicorn-studio-waitlist"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `!function(){if(!window.UnicornStudio){window.UnicornStudio={isInitialized:!1};var i=document.createElement("script");i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.25/dist/unicornStudio.umd.js",i.onload=function(){window.UnicornStudio.isInitialized||(UnicornStudio.init(),window.UnicornStudio.isInitialized=!0)},(document.head || document.body).appendChild(i)}}();`
-          }}
-        />
-      </div>
       {/* Card Content */}
       <div className="relative z-10 p-8 md:p-12 rounded-3xl">
         {/* Status Chip */}

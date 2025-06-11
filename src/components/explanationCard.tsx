@@ -84,23 +84,8 @@ export default function ExplanationCard() {
 
   return (
     <section className="relative w-full mt-8 py-12 px-2 md:py-16">
-      {/* Unicorn Studio Border Background - Full Width Backdrop */}
-      <div className="absolute inset-0 w-full h-full z-0 pointer-events-none">
-        <div data-us-project="yb0tEBH5rJBVXDROMx24" className="w-full h-full"></div>
-        <Script
-          id="unicorn-studio-explanation"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `!function(){if(!window.UnicornStudio){window.UnicornStudio={isInitialized:!1};var i=document.createElement("script");i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.25/dist/unicornStudio.umd.js",i.onload=function(){window.UnicornStudio.isInitialized||(UnicornStudio.init(),window.UnicornStudio.isInitialized=!0)},(document.head || document.body).appendChild(i)}}();`
-          }}
-        />
-      </div>
-
       {/* Centered Content Card */}
-      <div
-        ref={containerRef}
-        className="relative z-10 w-full max-w-7xl mx-auto bg-gray-100 opacity-80 border border-neutral-200 rounded-3xl shadow-sm overflow-visible"
-      >
+      <div className="relative z-10 p-8 md:p-12 rounded-3xl">
         {/* Title */}
         <AnimatedText>
           <h2 className="text-center font-logo text-3xl md:text-4xl font-medium text-brand-900 mt-12 max-w-4xl mx-auto">

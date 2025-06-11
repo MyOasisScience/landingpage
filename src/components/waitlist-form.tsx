@@ -8,8 +8,7 @@ interface FormProps {
   inputClassName?: string;
   buttonClassName?: string;
   placeholder?: string;
-  buttonComponent?: React.ReactNode; // NEW: Allow custom button
-
+  buttonComponent?: React.ReactNode;
 }
 
 export default function WaitlistForm({
@@ -79,11 +78,10 @@ export default function WaitlistForm({
           <div className="sm:absolute sm:right-1 sm:top-[4px]">
             <button 
               type="submit"
-              className={`group relative px-8 py-2 rounded-full text-brand-50 font-medium
-                       bg-gradient-to-r from-teal-600 to-teal-500 
-                       hover:from-teal-500 hover:to-teal-400
-                       active:from-teal-700 active:to-teal-600 
-                       border border-teal-400/50
+              className={`group relative px-8 py-2 rounded-full text-white font-medium
+                       bg-[#3A86FF] hover:bg-[#2B75E5]
+                       active:bg-[#1A65D4]
+                       border border-[#3A86FF]/50
                        shadow-[0_4px_10px_rgba(0,0,0,0.15)] 
                        hover:shadow-[0_6px_15px_rgba(0,0,0,0.25)] 
                        active:shadow-[inset_0_2px_6px_rgba(0,0,0,0.3)]
@@ -94,14 +92,14 @@ export default function WaitlistForm({
                 Join Waitlist
               </span>
               <span
-                className="absolute inset-0 bg-gradient-to-b from-brand-50/20 via-transparent to-black/5 opacity-50 
+                className="absolute inset-0 bg-gradient-to-b from-white/20 via-transparent to-black/5 opacity-50 
                           group-hover:opacity-80 group-active:opacity-30 rounded-full"
               ></span>
               <span
-                className="absolute inset-0 border-t border-brand-50/20 rounded-full group-active:opacity-0"
+                className="absolute inset-0 border-t border-white/20 rounded-full group-active:opacity-0"
               ></span>
               <span
-                className="absolute -inset-[1px] blur-sm bg-gradient-to-r from-teal-400/50 to-teal-500/50 opacity-0 
+                className="absolute -inset-[1px] blur-sm bg-gradient-to-r from-[#3A86FF]/50 to-[#2B75E5]/50 opacity-0 
                          group-hover:opacity-100 -z-10 group-active:opacity-0 transition-opacity"
               ></span>
             </button>
