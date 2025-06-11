@@ -1,3 +1,4 @@
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
   basePath: '',
@@ -11,4 +12,5 @@ const nextConfig = {
   },
   compress: true
 };
-export default nextConfig;
+
+module.exports = nextConfig;
