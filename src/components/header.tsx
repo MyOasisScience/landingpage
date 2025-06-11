@@ -28,6 +28,11 @@ export default function Header() {
             <h1 className="font-logo font-medium text-3xl ml-1">MyOasis.science</h1>
           </Link>
 
+          {/* Version text in the middle */}
+          <div className="hidden md:block text-xs text-[#1B4D3E]/80">
+            v0.1.2 beta • Last update: June 2025
+          </div>
+
           {/* Hamburger icon - visible on small screens, hidden on md+ */}
           <div className="md:hidden">
             <button

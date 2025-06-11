@@ -10,7 +10,7 @@ export function Footer() {
           
           {/* Right side */}
           <div className="text-xs text-[#1B4D3E]/80">
-            v0.3.2 beta • Last update: June 2025
+            v0.1.2 beta • Last update: June 2025
           </div>
         </div>
       </div>
