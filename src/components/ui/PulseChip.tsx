@@ -11,7 +11,7 @@ export function PulseChip({ text, className = '' }: PulseChipProps) {
 
   return (
     <div 
-      className={`inline-flex items-center gap-2 px-4 py-2 rounded-md border border-neutral-600 text-neutral-600 font-mono text-sm md:text-base transition-colors duration-200 hover:bg-neutral-100 ${className}`}
+      className={`inline-flex items-center gap-2 px-4 py-2 rounded-md border border-neutral-600 text-neutral-600 font-mono text-xs md:text-sm transition-colors duration-200 hover:bg-neutral-100 ${className}`}
     >
       <div className="relative flex h-2.5 w-2.5">
         <span 

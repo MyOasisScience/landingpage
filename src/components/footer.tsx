@@ -4,12 +4,12 @@ export function Footer() {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           {/* Left side */}
-          <div className="text-xs text-[#1B4D3E]">
+          <div className="text-[11px] text-[#1B4D3E]">
             MyOasis.science — science translated for action
           </div>
           
           {/* Right side */}
-          <div className="text-xs text-[#1B4D3E]/80">
+          <div className="text-[11px] text-[#1B4D3E]/80">
             v0.1.2 beta • Last update: June 2025
           </div>
         </div>

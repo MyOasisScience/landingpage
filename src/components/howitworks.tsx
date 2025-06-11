@@ -95,7 +95,7 @@ export default function HowItWorks() {
                 <div className="md:flex md:gap-12">
                   {/* Step title - right aligned */}
                   <div className={`md:w-1/2 py-3 transition-colors duration-300 md:text-right ${isActive ? 'text-neutral-900' : 'text-neutral-300'}`}>
-                    <h3 className="font-logo text-3xl md:text-4xl transition-colors duration-500">
+                    <h3 className="font-logo text-2xl md:text-3xl transition-colors duration-500">
                       {step.title}
                     </h3>
                   </div>
@@ -112,7 +112,7 @@ export default function HowItWorks() {
                             exit={{ opacity: 0, x: -30 }}
                             transition={{ duration: 0.4, ease: "easeInOut" }}
                           >
-                            <p className="text-neutral-800 pr-4 whitespace-pre-line">{step.desc}</p>
+                            <p className="text-sm text-neutral-800 pr-4 whitespace-pre-line">{step.desc}</p>
                           </motion.div>
                         )}
                       </AnimatePresence>
@@ -122,7 +122,7 @@ export default function HowItWorks() {
                     <div className="block md:hidden relative">
                       {/* Hidden spacer element to maintain consistent height */}
                       <div className="opacity-0 invisible" aria-hidden="true">
-                        <p>{longestDesc}</p>
+                        <p className="text-sm">{longestDesc}</p>
                       </div>
                       
                       {/* Overlay the active description */}
@@ -135,7 +135,7 @@ export default function HowItWorks() {
                               exit={{ opacity: 0 }}
                               transition={{ duration: 0.3 }}
                             >
-                              <p className="text-neutral-800 whitespace-pre-line">{step.desc}</p>
+                              <p className="text-sm text-neutral-800 whitespace-pre-line">{step.desc}</p>
                             </motion.div>
                           )}
                         </AnimatePresence>

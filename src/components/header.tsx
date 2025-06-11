@@ -25,11 +25,11 @@ export default function Header() {
                 priority
               />
             </div>
-            <h1 className="font-logo font-medium text-3xl ml-1">MyOasis.science</h1>
+            <h1 className="font-logo font-medium text-2xl ml-1">MyOasis.science</h1>
           </Link>
 
           {/* Version text in the middle */}
-          <div className="hidden md:block text-xs text-[#1B4D3E]/80">
+          <div className="hidden md:block text-[11px] text-[#1B4D3E]/80">
             v0.1.2 beta • Last update: June 2025
           </div>
 

@@ -61,10 +61,10 @@ export default function Hero() {
 
       {/* Content */}
       <div className="flex-1 text-center lg:text-left max-w-xl relative z-10 mt-4 md:mt-0 lg:ml-[10%] p-6 rounded-lg mx-auto lg:mx-0 w-[90%] lg:w-auto">
-        <h1 className="font-logo text-3xl sm:text-4xl lg:text-5xl font-medium text-[#2B3D3B]">
+        <h1 className="font-logo text-2xl sm:text-3xl lg:text-4xl font-medium text-[#2B3D3B]">
           Want to keep on top of the latest science in your field?
         </h1>
-        <p className="text-base text-[#444444] mb-8">
+        <p className="text-sm text-[#444444] mb-8">
           <br />
           <br />
           Get bespoke scientific, industry, and policy briefings, tailored to your goals, delivered directly to your inbox.

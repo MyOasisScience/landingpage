@@ -12,17 +12,17 @@ export function PaymentCard() {
 
         {/* Heading */}
         <div className="text-center mb-8">
-          <h2 className="font-logo text-2xl md:text-4xl font-medium mb-4 tracking-tighter">
+          <h2 className="font-logo text-xl md:text-3xl font-medium mb-4 tracking-tighter">
             Want 50% off your first year?
           </h2>
-          <p className="text-neutral-700 text-base mb-6">
+          <p className="text-neutral-700 text-sm mb-6">
             Pre-order your annual subscription now for just £60 and become a Founding Member.
           </p>
         </div>
 
         {/* Benefits List */}
         <div className="max-w-md mx-auto mb-8">
-          <ul className="space-y-4 text-neutral-700 text-base">
+          <ul className="space-y-4 text-neutral-700 text-sm">
             <li className="flex items-start">
               <span className="mr-2">✓</span>
               Priority access at launch
@@ -72,7 +72,7 @@ export function PaymentCard() {
         </div>
 
         {/* Note */}
-        <p className="text-center text-xs text-neutral-600 mt-6">
+        <p className="text-center text-[11px] text-neutral-600 mt-6">
           💡 Your early support funds the beta and locks in your discount for launch.
         </p>
       </div>
