@@ -75,7 +75,7 @@ export default function WaitlistForm({
           className={`rounded-full bg-white text-lg h-12 pr-4 sm:pr-44 ${inputClassName}`}
         />
         {buttonComponent ?? (
-          <div className="sm:absolute sm:right-1 sm:top-[4px]">
+          <div className="flex justify-center sm:absolute sm:right-1 sm:top-[4px]">
             <button 
               type="submit"
               className={`group relative px-8 py-2 rounded-full text-[#2B3D3B] font-medium

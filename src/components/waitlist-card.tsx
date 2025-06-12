@@ -23,7 +23,7 @@ export function WaitlistCard() {
 
         {/* Waitlist Form */}
         <WaitlistForm 
-          containerClassName="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
+          containerClassName="flex flex-col sm:flex-row gap-3 max-w-md mx-auto items-center"
           inputClassName="flex-1"
         />
       </div>
