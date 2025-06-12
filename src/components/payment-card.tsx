@@ -56,6 +56,7 @@ export function PaymentCard() {
           >
             <span className="relative z-10 drop-shadow-[0_1px_1px_rgba(0,0,0,0.3)] text-center block">
               Pre-order Now
+              <span className="hidden sm:inline"> - </span>
               <br className="sm:hidden" />
               <span className="sm:inline">£60 for 1st year</span>
             </span>
