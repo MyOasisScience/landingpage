@@ -1,30 +1,48 @@
 import Image from "next/image";
 
-const logos = [
+const mainLogos = [
+  {
+    name: "Trafigura",
+    src: "/images/Trafigura_company_logo.png",
+    alt: "Trafigura logo",
+  },
+  {
+    name: "BBC News",
+    src: "/images/BBC_News_2022_(Alt).png",
+    alt: "BBC News logo",
+  },
+  {
+    name: "HM Civil Service",
+    src: "/images/HM_Civil_Service_logo.png",
+    alt: "HM Civil Service logo",
+  },
+];
+
+const secondaryLogos = [
+  {
+    name: "SeedLegals",
+    src: "/images/seedlegals_1688985548.svg",
+    alt: "SeedLegals logo",
+  },
   {
     name: "Imperial College London",
     src: "/images/Imperial_College_London_new_logo.png",
     alt: "Imperial College London logo",
   },
   {
-    name: "SeedLegals",
-    src: "/images/seedlegals_1688985548.svg", 
-    alt: "SeedLegals logo",
-  },
-  {
     name: "UCL",
-    src: "/images/UCL_logo.png", 
+    src: "/images/UCL_logo.png",
     alt: "UCL logo",
   },
   {
-    name: "Trafigura",
-    src: "/images/Trafigura_company_logo.png", 
-    alt: "Trafigura logo",
+    name: "Revalue",
+    src: "/images/Revalue_Nature_logo.png",
+    alt: "Revalue logo",
   },
   {
-    name: "Revalue",
-    src: "/images/Revalue_Nature_logo.png", 
-    alt: "Revalue logo",
+    name: "EcoAct",
+    src: "/images/EcoAct-logo_Secondary_RGB_SKY.png",
+    alt: "EcoAct logo",
   },
 ];
 
@@ -36,15 +54,30 @@ export default function TrustedBy() {
         Advising innovation teams at:
       </h3>
 
-      {/* Logo Bar */}
-      <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 w-full py-4">
-        {logos.map((logo) => (
-          <div key={logo.name} className="flex items-center h-12 md:h-16">
+      {/* Main Logo Bar */}
+      <div className="flex flex-wrap justify-center items-center gap-12 w-full py-4">
+        {mainLogos.map((logo) => (
+          <div key={logo.name} className="flex items-center h-16 md:h-24">
             <Image
               src={logo.src}
               alt={logo.alt}
-              width={120}
-              height={64}
+              width={180}
+              height={96}
+              className="object-contain h-full w-auto grayscale hover:grayscale-0 transition-all duration-200"
+            />
+          </div>
+        ))}
+      </div>
+
+      {/* Secondary Logo Bar */}
+      <div className="flex flex-wrap justify-center items-center gap-8 md:gap-10 w-full py-2">
+        {secondaryLogos.map((logo) => (
+          <div key={logo.name} className="flex items-center h-8 md:h-10">
+            <Image
+              src={logo.src}
+              alt={logo.alt}
+              width={90}
+              height={40}
               className="object-contain h-full w-auto grayscale hover:grayscale-0 transition-all duration-200"
             />
           </div>
