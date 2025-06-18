@@ -1,11 +1,11 @@
 "use client";
 
 import { memo } from "react";
-import { TextReveal } from "./TextReveal";
+import { TextReveal } from "./animations/TextReveal";
 
 // Precompute content to avoid recreating it on every render
 const textContent = [
-  "For policy teams, tech startups, and comms professionals who can't afford to fall behind."
+  "For startup decision-makers, policy leads, and comms professionals who can’t afford to fall behind."
 ];
 
 // Memoize the entire component to prevent unnecessary re-renders

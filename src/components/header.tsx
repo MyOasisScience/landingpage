@@ -50,7 +50,7 @@ export default function Header() {
           <nav className="hidden md:flex items-center gap-6">
             {/* <NavLink href="/about">About Us</NavLink> */}
             {/* <NavLink href="/lawyers">For Lawyers</NavLink> */}
-            <Link href="/#waitlist" className="outline-none">
+            <Link href="/#payment" className="outline-none">
               <button 
                 className="group relative px-8 py-2 rounded-full text-[#2B3D3B] font-medium
                     bg-[#C6FF00] hover:bg-[#B2E600]
@@ -63,7 +63,7 @@ export default function Header() {
                     active:translate-y-0.5"
               >
                 <span className="relative z-10 drop-shadow-[0_1px_1px_rgba(0,0,0,0.3)]">
-                  Join waitlist
+                  Pre-order now
                 </span>
                 <span
                   className="absolute inset-0 bg-gradient-to-b from-white/20 via-transparent to-black/5 opacity-50 
@@ -87,7 +87,7 @@ export default function Header() {
           <nav className="flex flex-col items-center gap-4 p-4 mx-4 rounded-md">
             {/* <NavLink href="/about" className="text-sm">About Us</NavLink> */}
             {/* <NavLink href="/lawyers" className="text-sm">For Lawyers</NavLink> */}
-            <Link href="/#waitlist" className="w-full">
+            <Link href="/#payment" className="w-full">
               <button 
                 className="group relative w-full px-8 py-2 rounded-full text-[#2B3D3B] font-medium
                     bg-[#C6FF00] hover:bg-[#B2E600]
@@ -100,7 +100,7 @@ export default function Header() {
                     active:translate-y-0.5"
               >
                 <span className="relative z-10 drop-shadow-[0_1px_1px_rgba(0,0,0,0.3)]">
-                  Join the waitlist
+                  Pre-order now
                 </span>
                 <span
                   className="absolute inset-0 bg-gradient-to-b from-white/20 via-transparent to-black/5 opacity-50 
