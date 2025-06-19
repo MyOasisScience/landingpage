@@ -9,8 +9,9 @@ export function Footer() {
           </div>
           
           {/* Right side */}
-          <div className="text-[11px] text-[#1B4D3E]/80">
-            v0.1.2 beta • Last update: June 2025
+          <div className="text-[11px] text-[#1B4D3E]/80 text-right">
+            <div>v0.1.2 beta • Last update: June 2025</div>
+            <div>hello@myoasis.science</div>
           </div>
         </div>
       </div>
