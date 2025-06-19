@@ -1,6 +1,15 @@
 "use client";
 
+import { useState } from "react";
+
 export default function AboutUs() {
+  const [selectedPlan, setSelectedPlan] = useState("monthly");
+
+  const stripeLinks = {
+    monthly: "https://buy.stripe.com/eVq3cu5PPdGneDb5ps1ck01",
+    annual: "https://buy.stripe.com/28E3cufqp6dV8eNf021ck02"
+  };
+
   return (
     <section className="w-full justify-center px-4 mt-16 pb-16">
       <div className="w-full flex flex-col items-center mx-auto gap-8 max-w-4xl">
@@ -76,10 +85,25 @@ export default function AboutUs() {
             We&apos;re excited to build this with you!
           </p>
 
-          {/* CTA Button */}
-          <div className="w-full flex justify-center">
+          {/* Plan Selection and CTA Button */}
+          <div className="w-full flex flex-col items-center gap-4">
+            <div className="flex flex-col sm:flex-row items-center gap-3">
+              <label htmlFor="plan-select-about" className="text-sm font-medium text-[#2B3D3B]">
+                Choose your plan:
+              </label>
+              <select 
+                id="plan-select-about" 
+                value={selectedPlan}
+                onChange={(e) => setSelectedPlan(e.target.value)}
+                className="px-3 py-2 border border-[#2B3D3B]/20 rounded-lg bg-white text-[#2B3D3B] font-medium focus:outline-none focus:ring-2 focus:ring-[#C6FF00] focus:border-transparent"
+              >
+                <option value="monthly">Monthly – £5</option>
+                <option value="annual">Annual – £50</option>
+              </select>
+            </div>
+            
             <a 
-              href="https://buy.stripe.com/6oUbJ06TTbyf52BcRU1ck00"
+              href={stripeLinks[selectedPlan as keyof typeof stripeLinks]}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block group relative px-8 py-3 rounded-full text-[#2B3D3B] font-medium

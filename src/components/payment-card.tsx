@@ -1,4 +1,15 @@
+"use client";
+
+import { useState } from "react";
+
 export function PaymentCard() {
+  const [selectedPlan, setSelectedPlan] = useState("monthly");
+
+  const stripeLinks = {
+    monthly: "https://buy.stripe.com/eVq3cu5PPdGneDb5ps1ck01",
+    annual: "https://buy.stripe.com/28E3cufqp6dV8eNf021ck02"
+  };
+
   return (
     <div className="relative max-w-7xl mx-auto w-[calc(100%-1rem)] sm:w-full px-2 sm:px-4 sm:my-8 rounded-3xl overflow-hidden">
       {/* Card Content */}
@@ -54,10 +65,25 @@ export function PaymentCard() {
           </ul>
         </div>
 
-        {/* CTA Button */}
-        <div className="flex justify-center">
+        {/* Plan Selection and CTA Button */}
+        <div className="flex flex-col items-center gap-4 mb-6">
+          <div className="flex flex-col sm:flex-row items-center gap-3">
+            <label htmlFor="plan-select-payment" className="text-sm font-medium text-neutral-700">
+              Choose your plan:
+            </label>
+            <select 
+              id="plan-select-payment" 
+              value={selectedPlan}
+              onChange={(e) => setSelectedPlan(e.target.value)}
+              className="px-3 py-2 border border-neutral-300 rounded-lg bg-white text-neutral-700 font-medium focus:outline-none focus:ring-2 focus:ring-[#C6FF00] focus:border-transparent"
+            >
+              <option value="monthly">Monthly – £5</option>
+              <option value="annual">Annual – £50</option>
+            </select>
+          </div>
+          
           <a 
-            href="https://buy.stripe.com/6oUbJ06TTbyf52BcRU1ck00"
+            href={stripeLinks[selectedPlan as keyof typeof stripeLinks]}
             target="_blank"
             rel="noopener noreferrer"
             className="group relative px-8 py-3 rounded-full text-[#2B3D3B] font-medium
