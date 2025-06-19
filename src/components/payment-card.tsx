@@ -1,5 +1,3 @@
-import { PulseChip } from "./ui/PulseChip";
-
 export function PaymentCard() {
   return (
     <div className="relative max-w-7xl mx-auto w-[calc(100%-1rem)] sm:w-full px-2 sm:px-4 sm:my-8 rounded-3xl overflow-hidden">
@@ -7,16 +5,30 @@ export function PaymentCard() {
       <div className="relative z-10 p-8 md:p-12 rounded-3xl">
         {/* Status Chip */}
         <div className="flex justify-center mb-8">
-          <PulseChip text="Limited time offer" />
+          <h3 className="text-lg md:text-2xl font-medium text-neutral-700 mb-2 text-center">
+            Founding Member Access — 50% Off for the first 3 years. 
+          </h3>
+        </div>
+
+        {/* Progress Bar */}
+        <div className="max-w-md mx-auto mb-8">
+          <div className="text-center mb-3">
+            <p className="text-sm text-neutral-600">
+              222 out of 250 spots left
+            </p>
+          </div>
+          <div className="w-full bg-neutral-200 rounded-full h-2">
+            <div 
+              className="bg-[#C6FF00] h-2 rounded-full transition-all duration-300"
+              style={{ width: `${((250 - 222) / 250) * 100}%` }}
+            ></div>
+          </div>
         </div>
 
         {/* Heading */}
         <div className="text-center mb-8">
-          <h2 className="font-logo text-xl md:text-3xl font-medium mb-4 tracking-tighter">
-            Want 50% off your first year?
-          </h2>
           <p className="text-neutral-700 text-sm mb-6">
-            Pre-order your annual subscription now for just £60 and become a Founding Member.
+            Just <strong>£5/month or £50/year</strong>, for the first 3 years.
           </p>
         </div>
 
@@ -25,15 +37,19 @@ export function PaymentCard() {
           <ul className="space-y-4 text-neutral-700 text-sm">
             <li className="flex items-start">
               <span className="mr-2">✓</span>
-              Priority access at launch
+              Day-one beta access
             </li>
             <li className="flex items-start">
               <span className="mr-2">✓</span>
-              50% off your first year (normally £120)
+              Founder rate — 50% off for 3 yrs
             </li>
             <li className="flex items-start">
               <span className="mr-2">✓</span>
-              A chance to help shape the platform as we build
+              Private Discord to steer roadmap
+            </li>
+            <li className="flex items-start">
+              <span className="mr-2">✓</span>
+              100% refund if we don't launch
             </li>
           </ul>
         </div>
@@ -55,10 +71,7 @@ export function PaymentCard() {
                      active:translate-y-0.5"
           >
             <span className="relative z-10 drop-shadow-[0_1px_1px_rgba(0,0,0,0.3)] text-center block">
-              Pre-order Now
-              <span className="hidden sm:inline"> - </span>
-              <br className="sm:hidden" />
-              <span className="sm:inline">£60 for 1st year</span>
+              Become a Founding Member
             </span>
             <span
               className="absolute inset-0 bg-gradient-to-b from-white/20 via-transparent to-black/5 opacity-50 
@@ -76,7 +89,9 @@ export function PaymentCard() {
 
         {/* Note */}
         <p className="text-center text-[11px] text-neutral-600 mt-6">
-          💡 Your early support funds the beta and locks in your discount for launch.
+          Note - <strong>You'll only be billed once today, nothing recurring until we launch.</strong>
+          <br />
+          If we don't ship, you'll get a full refund. No questions asked.
         </p>
       </div>
     </div>

@@ -2,20 +2,23 @@
 
 import React, { useRef, useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { PulseChip } from "./ui/PulseChip";
 
 const steps = [
   {
+    title: "Become a Founding Member",
+    desc: "Pay £5/month or £50/year today to reserve your spot.\n\nYour subscription won't begin — or renew — until we start delivering weekly reports.\n\nIf we don't launch, you'll get a full refund.",
+  },
+  {
     title: "Tell us what you're working on",
-    desc: "Share your current focus, your tech stack, and what you're interested in.",
+    desc: "We'll reach out to understand your focus, goals, and what insights matter most to you.",
   },
   {
-    title: "We research for you",
-    desc: "Each week, we curate a custom report just for you, drawing from breakthrough scientific research, industry & corporate developments, and new tech tools and releases.",
+    title: "We build your weekly brief",
+    desc: "When we launch, you'll receive a custom weekly report just for you drawing from breakthrough scientific research, industry & corporate developments, and new tech tools and releases.",
   },
   {
-    title: "You get a weekly report",
-    desc: "Actionable summaries with direct links to explore further.",
+    title: "Read and refine",
+    desc: "Reply with feedback any time, and we'll fine-tune your brief to make sure it delivers exactly what's useful to you.",
   },
 ];
 
@@ -78,7 +81,9 @@ export default function HowItWorks() {
       <div className="w-full flex flex-col items-center mx-auto gap-8 max-w-6xl">
         {/* Centered header chip */}
         <div className="flex flex-col items-center text-center">
-          <PulseChip text="How MyOasis.science works" />
+          <h3 className="text-lg md:text-2xl font-medium text-neutral-700 mb-2 text-center">
+            How MyOasis.science works
+          </h3>
         </div>
 
         {/* Content container */}

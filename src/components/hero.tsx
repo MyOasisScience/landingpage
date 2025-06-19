@@ -1,7 +1,6 @@
 "use client";
 
 import Script from "next/script";
-import WaitlistForm from "./waitlist-form";
 
 interface UnicornStudioOptions {
   elementId: string;
@@ -62,15 +61,42 @@ export default function Hero() {
       {/* Content */}
       <div className="flex-1 text-center lg:text-left max-w-xl relative z-10 mt-4 md:mt-0 lg:ml-[10%] p-6 rounded-lg mx-auto lg:mx-0 w-[90%] lg:w-auto">
         <h1 className="font-logo text-2xl sm:text-3xl lg:text-4xl font-medium text-[#2B3D3B]">
-          Want to keep on top of the latest science in your field?
+          Stay 3 Steps Ahead of the Next Industry Shift.
         </h1>
         <p className="text-sm text-[#444444] mb-8">
           <br />
-          <br />
-          Get bespoke scientific, industry, and policy briefings, tailored to your goals, delivered directly to your inbox.
+          Weekly custom briefs of frontier research, social chatter, and insider reports - tailored to your focus. Delivered every Friday.
         </p>
-        <div className="max-w-md relative">
-          <WaitlistForm />
+        <div className="w-full flex justify-center lg:justify-start">
+          <a 
+            href="https://buy.stripe.com/6oUbJ06TTbyf52BcRU1ck00"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block group relative px-8 py-3 rounded-full text-[#2B3D3B] font-medium
+                     bg-[#C6FF00] hover:bg-[#B2E600]
+                     active:bg-[#9ECC00]
+                     border border-[#C6FF00]/50
+                     shadow-[0_4px_10px_rgba(0,0,0,0.15)] 
+                     hover:shadow-[0_6px_15px_rgba(0,0,0,0.25)] 
+                     active:shadow-[inset_0_2px_6px_rgba(0,0,0,0.3)]
+                     transition-all duration-200
+                     active:translate-y-0.5"
+          >
+            <span className="relative z-10 drop-shadow-[0_1px_1px_rgba(0,0,0,0.3)] text-center block">
+              Become a Founding Member
+            </span>
+            <span
+              className="absolute inset-0 bg-gradient-to-b from-white/20 via-transparent to-black/5 opacity-50 
+                      group-hover:opacity-80 group-active:opacity-30 rounded-full"
+            ></span>
+            <span
+              className="absolute inset-0 border-t border-white/20 rounded-full group-active:opacity-0"
+            ></span>
+            <span
+              className="absolute -inset-[1px] blur-sm bg-gradient-to-r from-[#C6FF00]/50 to-[#B2E600]/50 opacity-0 
+                       group-hover:opacity-100 -z-10 group-active:opacity-0 transition-opacity"
+            ></span>
+          </a>
         </div>
       </div>
 
