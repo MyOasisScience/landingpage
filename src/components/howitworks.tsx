@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const steps = [
   {
     title: "Become a Founding Member",
-    desc: "Pay £5/month or £50/year today to reserve your spot.\n\nYour subscription won't begin — or renew — until we start delivering weekly reports.\n\nIf we don't launch, you'll get a full refund.",
+    desc: "Pay £5/month or £50/year today to reserve your spot.\n\nYour subscription won't begin until we start delivering weekly reports.\n\nIf we don't launch, you'll get a full refund.",
   },
   {
     title: "Tell us what you're working on",
