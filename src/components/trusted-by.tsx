@@ -87,7 +87,7 @@ export default function TrustedBy() {
       {/* Testimonial */}
       <figure className="max-w-2xl mx-auto text-center bg-neutral-50 border border-neutral-200 rounded-xl p-6 md:p-8 shadow-sm">
         <blockquote className="text-neutral-800 text-base md:text-lg italic mb-4">
-          "I need to stay ahead of not just cutting-edge research, but also the industry methods that are becoming best practice, like scientific approaches with 1,000+ citations. This kind of custom report gives me confidence I'm not missing anything, and means I don't have to rely on my network or socials to stay ahead."
+          &quot;I need to stay ahead of not just cutting-edge research, but also the industry methods that are becoming best practice, like scientific approaches with 1,000+ citations. This kind of custom report gives me confidence I&apos;m not missing anything, and means I don&apos;t have to rely on my network or socials to stay ahead.&quot;
         </blockquote>
         <figcaption className="text-neutral-600 text-sm md:text-base font-medium flex items-center justify-center gap-2">
           <a

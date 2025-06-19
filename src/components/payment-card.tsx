@@ -49,7 +49,7 @@ export function PaymentCard() {
             </li>
             <li className="flex items-start">
               <span className="mr-2">✓</span>
-              100% refund if we don't launch
+              100% refund if we don&apos;t launch
             </li>
           </ul>
         </div>
@@ -89,9 +89,9 @@ export function PaymentCard() {
 
         {/* Note */}
         <p className="text-center text-[11px] text-neutral-600 mt-6">
-          Note - <strong>You'll only be billed once today, nothing recurring until we launch.</strong>
+          Note - <strong>You&apos;ll only be billed once today, nothing recurring until we launch.</strong>
           <br />
-          If we don't ship, you'll get a full refund. No questions asked.
+          If we don&apos;t ship, you&apos;ll get a full refund. No questions asked.
         </p>
       </div>
     </div>
