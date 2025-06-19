@@ -35,11 +35,6 @@ const secondaryLogos = [
     alt: "UCL logo",
   },
   {
-    name: "Revalue",
-    src: "/images/Revalue_Nature_logo.png",
-    alt: "Revalue logo",
-  },
-  {
     name: "EcoAct",
     src: "/images/EcoAct-logo_Secondary_RGB_SKY.png",
     alt: "EcoAct logo",
