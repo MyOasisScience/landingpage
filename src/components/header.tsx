@@ -63,7 +63,7 @@ export default function Header() {
                     active:translate-y-0.5"
               >
                 <span className="relative z-10 drop-shadow-[0_1px_1px_rgba(0,0,0,0.3)]">
-                  Pre-order now
+                  Become a Founding Member
                 </span>
                 <span
                   className="absolute inset-0 bg-gradient-to-b from-white/20 via-transparent to-black/5 opacity-50 

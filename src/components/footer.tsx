@@ -5,7 +5,7 @@ export function Footer() {
         <div className="flex justify-between items-center">
           {/* Left side */}
           <div className="text-[11px] text-[#1B4D3E]">
-            MyOasis.science — science translated for action
+            MyOasis.science — curated science translated for action
           </div>
           
           {/* Right side */}
