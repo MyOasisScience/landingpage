@@ -1,6 +1,7 @@
 "use client";
 
 import Script from "next/script";
+import { useState } from "react";
 
 interface UnicornStudioOptions {
   elementId: string;
@@ -25,6 +26,13 @@ declare global {
 }
 
 export default function Hero() {
+  const [selectedPlan, setSelectedPlan] = useState("monthly");
+
+  const stripeLinks = {
+    monthly: "https://buy.stripe.com/eVq3cu5PPdGneDb5ps1ck01",
+    annual: "https://buy.stripe.com/28E3cufqp6dV8eNf021ck02"
+  };
+
   const handleScriptLoad = async () => {
     if (typeof window === "undefined" || !window.UnicornStudio) return;
 
@@ -67,9 +75,24 @@ export default function Hero() {
           <br />
           Weekly custom briefs of frontier research, social chatter, and insider reports - tailored to your focus. Delivered every Friday.
         </p>
-        <div className="w-full flex justify-center lg:justify-start">
+        <div className="w-full flex flex-col items-center lg:items-start gap-4">
+          <div className="flex flex-col sm:flex-row items-center gap-3">
+            <label htmlFor="plan-select" className="text-sm font-medium text-[#2B3D3B]">
+              Choose your plan:
+            </label>
+            <select 
+              id="plan-select" 
+              value={selectedPlan}
+              onChange={(e) => setSelectedPlan(e.target.value)}
+              className="px-3 py-2 border border-[#2B3D3B]/20 rounded-lg bg-white text-[#2B3D3B] font-medium focus:outline-none focus:ring-2 focus:ring-[#C6FF00] focus:border-transparent"
+            >
+              <option value="monthly">Monthly – £5</option>
+              <option value="annual">Annual – £50</option>
+            </select>
+          </div>
+          
           <a 
-            href="https://buy.stripe.com/6oUbJ06TTbyf52BcRU1ck00"
+            href={stripeLinks[selectedPlan as keyof typeof stripeLinks]}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block group relative px-8 py-3 rounded-full text-[#2B3D3B] font-medium
