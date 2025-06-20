@@ -197,7 +197,7 @@ export const TextReveal: FC<TextRevealProps> = memo(
 
     const { scrollYProgress } = useScroll({
       target: targetRef,
-      offset: ["start 0.95", "start 0.15"],
+      offset: ["start 0.9", "start 0.1"],
     });
 
     // Process content once using useMemo
@@ -240,12 +240,13 @@ export const TextReveal: FC<TextRevealProps> = memo(
       const handleScrollProgress = throttle((latest: number) => {
         let pos = 0;
         if (items.length > 0) {
-          if (latest <= 0.001) pos = 0;
-          else if (latest >= 0.999) pos = items.length;
-          else pos = Math.round(latest * items.length);
+          // Ensure we start at 0 when scroll progress is very low
+          if (latest <= 0.01) pos = 0;
+          else if (latest >= 0.99) pos = items.length;
+          else pos = Math.floor(latest * items.length);
         }
         setEffectiveCursorPos(pos);
-      }, 50); // 50ms throttle for smoother updates
+      }, 16); // Reduced throttle for smoother updates
 
       const unsubscribe = scrollYProgress.on("change", handleScrollProgress);
       return unsubscribe;

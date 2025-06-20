@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export function PaymentCard() {
+export function PaymentCard2() {
   const [selectedPlan, setSelectedPlan] = useState("monthly");
 
   const stripeLinks = {
@@ -15,55 +15,6 @@ export function PaymentCard() {
       {/* Card Content */}
       <div className="relative z-10 p-6 md:p-8">
         {/* Status Chip */}
-        <div className="flex justify-center mb-6">
-          <h3 className="text-lg md:text-xl font-medium text-gray-800 mb-2 text-center">
-            Founding Member Access — 50% Off for the first 3 years. 
-          </h3>
-        </div>
-
-        {/* Progress Bar */}
-        <div className="max-w-md mx-auto mb-6">
-          <div className="text-center mb-3">
-            <p className="text-sm text-gray-700">
-              222 out of 250 spots left
-            </p>
-          </div>
-          <div className="w-full bg-gray-200 rounded-full h-2">
-            <div 
-              className="bg-[#C6FF00] h-2 rounded-full transition-all duration-300"
-              style={{ width: `${((250 - 222) / 250) * 100}%` }}
-            ></div>
-          </div>
-        </div>
-
-        {/* Heading */}
-        <div className="text-center mb-6">
-          <p className="text-gray-800 text-sm mb-4">
-            Just <strong>£5/month or £50/year</strong>, for the first 3 years.
-          </p>
-        </div>
-
-        {/* Benefits List */}
-        <div className="max-w-md mx-auto mb-6">
-          <ul className="space-y-3 text-gray-800 text-sm">
-            <li className="flex items-start">
-              <span className="mr-2">✓</span>
-              Day-one beta access
-            </li>
-            <li className="flex items-start">
-              <span className="mr-2">✓</span>
-              Founder rate — 50% off for 3 yrs
-            </li>
-            <li className="flex items-start">
-              <span className="mr-2">✓</span>
-              Private Discord to steer roadmap
-            </li>
-            <li className="flex items-start">
-              <span className="mr-2">✓</span>
-              100% refund if we don&apos;t launch
-            </li>
-          </ul>
-        </div>
 
         {/* Plan Selection and CTA Button */}
         <div className="flex flex-col items-center gap-4 mb-4">
