@@ -115,16 +115,16 @@ export default function ExpandableCard() {
                   className="w-full"
                 >
                   {/* Mobile Layout - Stacked */}
-                  <div className="block md:hidden space-y-8 text-center px-4">
+                  <div className="block md:hidden space-y-4 text-center px-4">
                     <div>
-                      <h1 className="text-2xl font-bold text-gray-900 leading-tight mb-6">
+                      <h1 className="text-2xl font-bold text-gray-900 leading-tight mb-4">
                         <span className="block">2.</span>
                         <span className="block"><strong>We build your</strong></span>
                         <span className="block"><strong>weekly brief</strong></span>
                       </h1>
                     </div>
                     
-                    <div className="space-y-8">
+                    <div className="space-y-6">
                       {/* Email Animation */}
                       <motion.div
                         style={{
@@ -206,7 +206,7 @@ export default function ExpandableCard() {
                   </div>
 
                   {/* Desktop Layout - Side by side */}
-                  <div className="hidden md:flex items-center justify-between space-x-12 px-4">
+                  <div className="hidden md:flex items-center justify-between space-x-8 px-4">
                     <div className="flex-1 max-w-md">
                       <h1 className="text-2xl lg:text-3xl font-bold text-gray-900 leading-tight">
                         <span className="block">2.</span>
@@ -215,7 +215,7 @@ export default function ExpandableCard() {
                       </h1>
                     </div>
 
-                    <div className="flex-1 space-y-8">
+                    <div className="flex-1 space-y-6">
                       {/* Email Animation */}
                       <motion.div
                         style={{
