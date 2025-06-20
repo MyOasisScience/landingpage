@@ -2,11 +2,6 @@ import Image from "next/image";
 
 const mainLogos = [
   {
-    name: "Trafigura",
-    src: "/images/Trafigura_company_logo.png",
-    alt: "Trafigura logo",
-  },
-  {
     name: "BBC News",
     src: "/images/BBC_News_2022_(Alt).png",
     alt: "BBC News logo",
