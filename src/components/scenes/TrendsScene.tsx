@@ -21,7 +21,7 @@ export default function TrendsScene({ scrollProgress = 0 }: TrendsSceneProps) {
             Every week, we recommend specific next steps based on your focus areas and current developments.
           </motion.p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             
             <motion.div
               className="bg-blue-50 border-none rounded-lg shadow-sm p-5"
@@ -30,7 +30,9 @@ export default function TrendsScene({ scrollProgress = 0 }: TrendsSceneProps) {
               }}
             >
               <p className="text-blue-800 text-md font-medium">
-                Use GenSLM to boost compound prediction in your pipeline — early adopters are seeing faster hits.
+                Experiment with MoE (Mixture of Experts) tuning for cost efficiency
+                <br />
+                → Google's latest Gemini work shows MoE tuning reduces compute costs by 38%. Try it on your fine-tuning workload with LoRA and gated routing.
               </p>
             </motion.div>
 
@@ -41,29 +43,22 @@ export default function TrendsScene({ scrollProgress = 0 }: TrendsSceneProps) {
               }}
             >
               <p className="text-green-800 text-md font-medium">
-                Tailor your fundraising deck to BioNTech's investment focus on programmable biology and DNA assembly.
+                Reference the May 2025 IPCC scenario brief in your next urban resilience policy memo
+                <br />
+                → It includes revised flood risk projections for Western Europe and actionable cost-benefit models for green infrastructure.
               </p>
             </motion.div>
 
             <motion.div
-              className="bg-purple-50 border-none rounded-lg shadow-sm p-5"
+              className="hidden sm:block bg-purple-50 border-none rounded-lg shadow-sm p-5"
               style={{
                 opacity: Math.max(0, (scrollProgress - 0.4) / 0.2)
               }}
             >
               <p className="text-purple-800 text-md font-medium">
-                Prototype a proof-of-concept using Qiskit or OrbNet to accelerate quantum-powered molecule modelling.
-              </p>
-            </motion.div>
-
-            <motion.div
-              className="bg-amber-50 border-none rounded-lg shadow-sm p-5"
-              style={{
-                opacity: Math.max(0, (scrollProgress - 0.5) / 0.2)
-              }}
-            >
-              <p className="text-amber-800 text-md font-medium">
-                Submit a proposal to NIH's AI-driven hypothesis funding stream, focused on generative model interpretability.
+                Adapt your R&D to align with BioNTech's programmable biology fund
+                <br />
+                → They're backing startups focused on DNA assembly platforms and programmable vaccine development. Position your product as compatible with open mRNA tech stacks.
               </p>
             </motion.div>
 

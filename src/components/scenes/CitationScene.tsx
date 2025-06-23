@@ -83,9 +83,9 @@ export default function CitationScene({ scrollProgress = 0 }: CitationSceneProps
                 </div>
               </motion.div>
 
-              {/* Addison Chemistry Paper */}
+              {/* Addison Chemistry Paper - hidden on mobile */}
               <motion.div
-                className="bg-gradient-to-br from-white to-gray-100 p-6 rounded-lg border border-gray-200 shadow-md hover:scale-[1.02] transition-transform"
+                className="hidden md:block bg-gradient-to-br from-white to-gray-100 p-6 rounded-lg border border-gray-200 shadow-md hover:scale-[1.02] transition-transform"
                 variants={cardVariants}
                 initial="hidden"
                 whileInView="visible"

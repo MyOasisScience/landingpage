@@ -17,15 +17,13 @@ export default function BuildScene({ scrollProgress = 0 }: BuildSceneProps) {
             <motion.div
               className="flex items-start space-x-6"
               style={{
-                opacity: Math.min(1, Math.max(0, (scrollProgress - 0.1) / 0.2)),
-                transform: `translateX(${(1 - Math.max(0, (scrollProgress - 0.1) / 0.2)) * -20}px)`
+                opacity: Math.min(1, Math.max(0, (scrollProgress - 0.1) / 0.2))
               }}
             >
               <motion.div
                 className="w-16 h-16 bg-lime-100 rounded-full flex items-center justify-center flex-shrink-0 border-2 border-lime-200"
                 style={{
-                  scale: Math.min(1, Math.max(0, (scrollProgress - 0.15) / 0.2)),
-                  transform: `scale(${Math.min(1, Math.max(0, (scrollProgress - 0.15) / 0.2))})`
+                  scale: Math.min(1, Math.max(0, (scrollProgress - 0.15) / 0.2))
                 }}
               >
                 <svg className="w-8 h-8 text-lime-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -42,15 +40,13 @@ export default function BuildScene({ scrollProgress = 0 }: BuildSceneProps) {
             <motion.div
               className="flex items-start space-x-6"
               style={{
-                opacity: Math.min(1, Math.max(0, (scrollProgress - 0.3) / 0.2)),
-                transform: `translateX(${(1 - Math.max(0, (scrollProgress - 0.3) / 0.2)) * -20}px)`
+                opacity: Math.min(1, Math.max(0, (scrollProgress - 0.3) / 0.2))
               }}
             >
               <motion.div
                 className="w-16 h-16 bg-lime-100 rounded-full flex items-center justify-center flex-shrink-0 border-2 border-lime-200"
                 style={{
-                  scale: Math.min(1, Math.max(0, (scrollProgress - 0.35) / 0.2)),
-                  transform: `scale(${Math.min(1, Math.max(0, (scrollProgress - 0.35) / 0.2))})`
+                  scale: Math.min(1, Math.max(0, (scrollProgress - 0.35) / 0.2))
                 }}
               >
                 <svg className="w-8 h-8 text-lime-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -67,15 +63,13 @@ export default function BuildScene({ scrollProgress = 0 }: BuildSceneProps) {
             <motion.div
               className="flex items-start space-x-6"
               style={{
-                opacity: Math.min(1, Math.max(0, (scrollProgress - 0.5) / 0.2)),
-                transform: `translateX(${(1 - Math.max(0, (scrollProgress - 0.5) / 0.2)) * -20}px)`
+                opacity: Math.min(1, Math.max(0, (scrollProgress - 0.5) / 0.2))
               }}
             >
               <motion.div
                 className="w-16 h-16 bg-lime-100 rounded-full flex items-center justify-center flex-shrink-0 border-2 border-lime-200"
                 style={{
-                  scale: Math.min(1, Math.max(0, (scrollProgress - 0.55) / 0.2)),
-                  transform: `scale(${Math.min(1, Math.max(0, (scrollProgress - 0.55) / 0.2))})`
+                  scale: Math.min(1, Math.max(0, (scrollProgress - 0.55) / 0.2))
                 }}
               >
                 <svg className="w-8 h-8 text-lime-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">

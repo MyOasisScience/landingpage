@@ -26,9 +26,26 @@ export default function SocialChatterScene({ scrollProgress = 0 }: SocialChatter
             className="w-full max-w-4xl mx-auto rounded-lg shadow-lg"
           />
           
-          {/* Reddit Post appearing from purple node */}
+          {/* Reddit Post appearing from purple node - Mobile */}
           <motion.div
-            className="absolute top-1/2 left-0"
+            className="absolute top-1/3 left-1/2 transform -translate-x-1/2 md:hidden"
+            style={{
+              opacity: redditPostEnter,
+              scale: redditPostEnter,
+              transform: `translate(-50%, ${redditPostEnter * -10}px) scale(${redditPostEnter})`
+            }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            <img 
+              src="/images/Reddit_influencer_post.png" 
+              alt="Reddit Influencer Post" 
+              className="w-40 h-auto rounded-lg shadow-xl border-2 border-purple-300"
+            />
+          </motion.div>
+
+          {/* Reddit Post appearing from purple node - Desktop */}
+          <motion.div
+            className="absolute top-1/2 left-0 hidden md:block"
             style={{
               opacity: redditPostEnter,
               scale: redditPostEnter,

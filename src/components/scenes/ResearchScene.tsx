@@ -21,71 +21,83 @@ export default function ResearchScene({ scrollProgress = 0 }: ResearchSceneProps
           <div className="space-y-6 mb-8">
             {/* Research Papers - Masonry Layout */}
             <div className="grid grid-cols-2 gap-8 max-w-2xl mx-auto">
-              <motion.div
-                className="relative w-full aspect-[3/2] bg-gradient-to-br from-white to-gray-100 border border-gray-200 shadow-md rounded-lg overflow-hidden hover:scale-[1.02] transition-transform"
-                variants={paperVariants}
-                initial="hidden"
-                whileInView="visible"
-                transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
-                viewport={{ once: true, amount: 0.5 }}
-              >
-                <div className="absolute top-2 right-2 bg-sky-100 text-sky-800 text-xs px-2 py-1 rounded-sm shadow-sm font-medium">
-                  🧠 Medical AI
+              <div>
+                <motion.div
+                  className="relative w-full aspect-[3/2] bg-gradient-to-br from-white to-gray-100 border border-gray-200 shadow-md rounded-lg overflow-hidden hover:scale-[1.02] transition-transform"
+                  variants={paperVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+                  viewport={{ once: true, amount: 0.5 }}
+                >
+                  <div className="absolute top-2 right-2 bg-sky-100 text-sky-800 text-xs px-2 py-1 rounded-sm shadow-sm font-medium">
+                    🧠 Medical AI
+                  </div>
+                  <img 
+                    src="/images/Paper1Title.png" 
+                    alt="Research Paper 1" 
+                    className="w-full h-full object-contain p-3"
+                  />
+                </motion.div>
+                <div className="text-center mt-2">
+                  <div className="text-xs font-semibold text-gray-700 bg-white/90 px-3 py-1.5 rounded-md shadow-sm border border-gray-200 inline-block">
+                    AI boosts Parkinson's treatment
+                  </div>
                 </div>
-                <img 
-                  src="/images/Paper1Title.png" 
-                  alt="Research Paper 1" 
-                  className="w-full h-full object-contain p-3"
-                />
-                <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 text-xs font-semibold text-gray-700 bg-white/90 px-3 py-1.5 rounded-md shadow-sm border border-gray-200">
-                  AI boosts Parkinson's treatment
-                </div>
-              </motion.div>
+              </div>
               
-              <motion.div
-                className="relative w-full aspect-[3/2] bg-gradient-to-br from-white to-gray-100 border border-gray-200 shadow-md rounded-lg overflow-hidden hover:scale-[1.02] transition-transform mt-12"
-                variants={paperVariants}
-                initial="hidden"
-                whileInView="visible"
-                transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-                viewport={{ once: true, amount: 0.5 }}
-              >
-                <div className="absolute top-2 right-2 bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-sm shadow-sm font-medium">
-                  🌱 Sustainability
+              <div>
+                <motion.div
+                  className="relative w-full aspect-[3/2] bg-gradient-to-br from-white to-gray-100 border border-gray-200 shadow-md rounded-lg overflow-hidden hover:scale-[1.02] transition-transform mt-12"
+                  variants={paperVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+                  viewport={{ once: true, amount: 0.5 }}
+                >
+                  <div className="absolute top-2 right-2 bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-sm shadow-sm font-medium">
+                    🌱 Sustainability
+                  </div>
+                  <img 
+                    src="/images/Paper2Title.png" 
+                    alt="Research Paper 2" 
+                    className="w-full h-full object-contain p-3"
+                  />
+                </motion.div>
+                <div className="text-center mt-2">
+                  <div className="text-xs font-semibold text-gray-700 bg-white/90 px-3 py-1.5 rounded-md shadow-sm border border-gray-200 inline-block">
+                    NLP's carbon footprint, quantified
+                  </div>
                 </div>
-                <img 
-                  src="/images/Paper2Title.png" 
-                  alt="Research Paper 2" 
-                  className="w-full h-full object-contain p-3"
-                />
-                <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 text-xs font-semibold text-gray-700 bg-white/90 px-3 py-1.5 rounded-md shadow-sm border border-gray-200">
-                  NLP's carbon footprint, quantified
-                </div>
-              </motion.div>
+              </div>
             </div>
             
-            {/* Third paper centered below */}
-            <div className="flex justify-center">
-              <motion.div
-                className="relative w-72 aspect-[3/2] bg-gradient-to-br from-white to-gray-100 border border-gray-200 shadow-md rounded-lg overflow-hidden hover:scale-[1.02] transition-transform"
-                variants={paperVariants}
-                initial="hidden"
-                whileInView="visible"
-                transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
-                viewport={{ once: true, amount: 0.5 }}
-              >
-                <div className="absolute top-2 right-2 bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-sm shadow-sm font-medium">
-                  🤖 Autonomous Research
+            {/* Third paper centered below - hidden on mobile */}
+            <div className="hidden md:flex justify-center">
+              <div>
+                <motion.div
+                  className="relative w-72 aspect-[3/2] bg-gradient-to-br from-white to-gray-100 border border-gray-200 shadow-md rounded-lg overflow-hidden hover:scale-[1.02] transition-transform"
+                  variants={paperVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
+                  viewport={{ once: true, amount: 0.5 }}
+                >
+                  <div className="absolute top-2 right-2 bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-sm shadow-sm font-medium">
+                    🤖 Autonomous Research
+                  </div>
+                  <img 
+                    src="/images/Paper3Title.png" 
+                    alt="Research Paper 3" 
+                    className="w-full h-full object-contain p-3"
+                  />
+                </motion.div>
+                <div className="text-center mt-2">
+                  <div className="text-xs font-semibold text-gray-700 bg-white/90 px-3 py-1.5 rounded-md shadow-sm border border-gray-200 inline-block">
+                    AI scientist passes peer review
+                  </div>
                 </div>
-                <img 
-                  src="/images/Paper3Title.png" 
-                  alt="Research Paper 3" 
-                  className="w-full h-full object-contain p-3"
-                />
-                <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 text-xs font-semibold text-gray-700 bg-white/90 px-3 py-1.5 rounded-md shadow-sm border border-gray-200">
-                  AI scientist passes peer review
-                </div>
-              </motion.div>
+              </div>
             </div>
           </div>
         </div>
