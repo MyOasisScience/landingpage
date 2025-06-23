@@ -2,185 +2,92 @@ import { motion } from "framer-motion"
 import Scene from "./Scene"
 
 interface BuildSceneProps {
-  onNext?: () => void
+  scrollProgress?: number
 }
 
-// Animation Variants
-const emailIconVariants = {
-  initial: { y: -50, opacity: 0 },
-  animate: { 
-    y: 0, 
-    opacity: 1,
-    transition: { delay: 0.5, duration: 0.8 }
-  }
-}
-
-const emailOpenVariants = {
-  initial: { scale: 0.8, opacity: 0 },
-  animate: { 
-    scale: 1, 
-    opacity: 1,
-    transition: { delay: 1.3, duration: 0.6 }
-  }
-}
-
-const reportVariants = {
-  initial: { y: 100, opacity: 0, rotateX: 90 },
-  animate: { 
-    y: 0, 
-    opacity: 1, 
-    rotateX: 0,
-    transition: { delay: 1.8, duration: 1.2, ease: "easeOut" }
-  }
-}
-
-export default function BuildScene({ onNext }: BuildSceneProps) {
+export default function BuildScene({ scrollProgress = 0 }: BuildSceneProps) {
   return (
-    <Scene>
-      <div className="bg-white border border-gray-200 rounded-md shadow-sm hover:shadow-md transition-shadow duration-200 w-full max-w-4xl">
-        {/* Reddit Post Header */}
-        <div className="flex items-center p-3 border-b border-gray-100">
-          <div className="flex items-center space-x-2">
-            <div className="w-6 h-6 bg-[#C6FF00] rounded-full flex items-center justify-center flex-shrink-0">
-              <span className="text-[#2B3D3B] text-xs font-bold">r</span>
-            </div>
-            <div className="flex flex-col">
-              <div className="flex items-center space-x-1">
-                <span className="text-sm font-medium text-gray-900">r/HowItWorks</span>
+    <Scene scrollProgress={scrollProgress}>
+      <div className="w-full max-w-4xl">
+        <div className="text-gray-900">
+          <h2 className="text-3xl font-semibold mb-8 text-center">2. We build your custom weekly debrief</h2>
+          
+          <div className="space-y-8">
+            {/* Step 1 */}
+            <motion.div
+              className="flex items-start space-x-6"
+              style={{
+                opacity: Math.min(1, Math.max(0, (scrollProgress - 0.1) / 0.2)),
+                transform: `translateX(${(1 - Math.max(0, (scrollProgress - 0.1) / 0.2)) * -20}px)`
+              }}
+            >
+              <motion.div
+                className="w-16 h-16 bg-lime-100 rounded-full flex items-center justify-center flex-shrink-0 border-2 border-lime-200"
+                style={{
+                  scale: Math.min(1, Math.max(0, (scrollProgress - 0.15) / 0.2)),
+                  transform: `scale(${Math.min(1, Math.max(0, (scrollProgress - 0.15) / 0.2))})`
+                }}
+              >
+                <svg className="w-8 h-8 text-lime-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
+              </motion.div>
+              <div>
+                <h3 className="font-semibold text-xl mb-3">Analyse your interests</h3>
+                <p className="text-lg text-gray-800">We analyse your brief and goals to understand what matters to you.</p>
               </div>
-              <div className="flex items-center space-x-1 text-xs text-gray-600">
-                <span>Posted by</span>
-                <span className="text-blue-600 hover:underline cursor-pointer">MyOasis.science</span>
-                <span>•</span>
-                <span>15 minutes ago</span>
+            </motion.div>
+
+            {/* Step 2 */}
+            <motion.div
+              className="flex items-start space-x-6"
+              style={{
+                opacity: Math.min(1, Math.max(0, (scrollProgress - 0.3) / 0.2)),
+                transform: `translateX(${(1 - Math.max(0, (scrollProgress - 0.3) / 0.2)) * -20}px)`
+              }}
+            >
+              <motion.div
+                className="w-16 h-16 bg-lime-100 rounded-full flex items-center justify-center flex-shrink-0 border-2 border-lime-200"
+                style={{
+                  scale: Math.min(1, Math.max(0, (scrollProgress - 0.35) / 0.2)),
+                  transform: `scale(${Math.min(1, Math.max(0, (scrollProgress - 0.35) / 0.2))})`
+                }}
+              >
+                <svg className="w-8 h-8 text-lime-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                </svg>
+              </motion.div>
+              <div>
+                <h3 className="font-semibold text-xl mb-3">Curate relevant content</h3>
+                <p className="text-lg text-gray-800">Our AI scans thousands of scientific papers, industry reports, and social threads to find the most relevant insights for you.</p>
               </div>
-            </div>
-          </div>
-        </div>
+            </motion.div>
 
-        {/* Reddit Post Content */}
-        <div className="flex">
-          {/* Vote Column */}
-          <div className="flex flex-col items-center w-10 bg-gray-50 py-2">
-            <button className="text-gray-500 hover:text-[#B2E600] hover:scale-110 transition-all duration-200 p-1 group cursor-pointer">
-              <svg className="w-5 h-5 group-hover:w-6 group-hover:h-6 group-hover:font-bold transition-all duration-200" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M3.293 9.707a1 1 0 010-1.414l6-6a1 1 0 011.414 0l6 6a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L4.707 9.707a1 1 0 01-1.414 0z" clipRule="evenodd" />
-              </svg>
-            </button>
-            <span className="text-xs font-medium py-1 text-gray-900">1.6k</span>
-            <button className="text-gray-500 hover:text-blue-500 hover:scale-110 transition-all duration-200 p-1 group cursor-pointer">
-              <svg className="w-5 h-5 group-hover:w-6 group-hover:h-6 group-hover:font-bold transition-all duration-200" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M16.707 10.293a1 1 0 010 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 111.414-1.414L9 14.586V3a1 1 0 012 0v11.586l4.293-4.293a1 1 0 011.414 0z" clipRule="evenodd" />
-              </svg>
-            </button>
-          </div>
-
-          {/* Main Content */}
-          <div className="flex-1 p-4">
-            <div className="text-gray-900">
-              <h2 className="text-3xl font-semibold mb-4">We build your weekly brief</h2>
-              <p className="text-lg text-gray-700 mb-8">
-                Our team curates the most relevant research and insights for your specific focus areas.
-              </p>
-              
-              <div className="space-y-8">
-                {/* Email Animation */}
-                <motion.div
-                  variants={emailIconVariants}
-                  initial="initial"
-                  animate="animate"
-                  className="flex justify-center"
-                >
-                  <div className="relative">
-                    <motion.div className="w-16 h-12 bg-blue-500 rounded-lg shadow-lg flex items-center justify-center">
-                      <svg className="w-8 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                      </svg>
-                    </motion.div>
-                    
-                    <motion.div
-                      variants={emailOpenVariants}
-                      initial="initial"
-                      animate="animate"
-                      className="absolute -top-2 -right-2 w-20 h-16 bg-white border-2 border-gray-300 rounded-lg shadow-lg"
-                    >
-                      <div className="p-2">
-                        <div className="w-full h-2 bg-gray-200 rounded mb-1"></div>
-                        <div className="w-3/4 h-2 bg-gray-200 rounded mb-1"></div>
-                        <div className="w-1/2 h-2 bg-gray-200 rounded"></div>
-                      </div>
-                    </motion.div>
-                  </div>
-                </motion.div>
-
-                {/* Report Animation */}
-                <motion.div
-                  variants={reportVariants}
-                  initial="initial"
-                  animate="animate"
-                  className="flex justify-center"
-                >
-                  <motion.div className="w-64 h-72 bg-white border-2 border-gray-300 rounded-lg shadow-xl transform perspective-1000">
-                    <div className="p-4 h-full flex flex-col">
-                      {/* Report Header */}
-                      <div className="border-b border-gray-200 pb-3 mb-3">
-                        <h3 className="text-sm font-bold text-gray-900 text-center">
-                          Jack Dunning&apos;s Weekly Oasis
-                        </h3>
-                        <p className="text-xs text-gray-600 text-center">
-                          w/c 23/07/2025
-                        </p>
-                      </div>
-                      
-                      {/* Report Content Placeholder */}
-                      <div className="flex-1 space-y-2">
-                        <div className="w-full h-2 bg-gray-200 rounded"></div>
-                        <div className="w-5/6 h-2 bg-gray-200 rounded"></div>
-                        <div className="w-4/5 h-2 bg-gray-200 rounded"></div>
-                        <div className="w-full h-2 bg-gray-200 rounded"></div>
-                        <div className="w-3/4 h-2 bg-gray-200 rounded"></div>
-                        <div className="w-5/6 h-2 bg-gray-200 rounded"></div>
-                        <div className="w-4/5 h-2 bg-gray-200 rounded"></div>
-                        <div className="w-full h-2 bg-gray-200 rounded"></div>
-                        <div className="w-3/4 h-2 bg-gray-200 rounded"></div>
-                        <div className="w-5/6 h-2 bg-gray-200 rounded"></div>
-                      </div>
-                    </div>
-                  </motion.div>
-                </motion.div>
+            {/* Step 3 */}
+            <motion.div
+              className="flex items-start space-x-6"
+              style={{
+                opacity: Math.min(1, Math.max(0, (scrollProgress - 0.5) / 0.2)),
+                transform: `translateX(${(1 - Math.max(0, (scrollProgress - 0.5) / 0.2)) * -20}px)`
+              }}
+            >
+              <motion.div
+                className="w-16 h-16 bg-lime-100 rounded-full flex items-center justify-center flex-shrink-0 border-2 border-lime-200"
+                style={{
+                  scale: Math.min(1, Math.max(0, (scrollProgress - 0.55) / 0.2)),
+                  transform: `scale(${Math.min(1, Math.max(0, (scrollProgress - 0.55) / 0.2))})`
+                }}
+              >
+                <svg className="w-8 h-8 text-lime-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              </motion.div>
+              <div>
+                <h3 className="font-semibold text-xl mb-3">Deliver insights</h3>
+                <p className="text-lg text-gray-800">Each week, we deliver a newsletter summarising key developments, trends, and discussions in your field.</p>
               </div>
-            </div>
+            </motion.div>
           </div>
-        </div>
-
-        {/* Reddit Post Footer */}
-        <div className="flex items-center justify-between px-4 py-2 border-t border-gray-100 bg-gray-50">
-          <div className="flex items-center space-x-4">
-            <button className="flex items-center space-x-1 text-gray-600 hover:bg-gray-200 px-2 py-1 rounded transition-colors">
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd" />
-              </svg>
-              <span className="text-sm">89 Comments</span>
-            </button>
-            <button className="flex items-center space-x-1 text-gray-600 hover:bg-gray-200 px-2 py-1 rounded transition-colors">
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z" />
-              </svg>
-              <span className="text-sm">Share</span>
-            </button>
-            <button className="flex items-center space-x-1 text-gray-600 hover:bg-gray-200 px-2 py-1 rounded transition-colors">
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              <span className="text-sm">Save</span>
-            </button>
-          </div>
-          <button className="text-gray-600 hover:bg-gray-200 p-1 rounded transition-colors">
-            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
-            </svg>
-          </button>
         </div>
       </div>
     </Scene>

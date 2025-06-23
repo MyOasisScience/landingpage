@@ -1,122 +1,120 @@
 import { motion } from "framer-motion"
 import Scene from "./Scene"
 
-const citationVariants = {
-  initial: { scale: 0.8, opacity: 0 },
-  animate: { 
-    scale: 1, 
-    opacity: 1,
-    transition: { delay: 0.5, duration: 0.8, ease: "easeOut" }
-  }
+interface CitationSceneProps {
+  scrollProgress?: number
 }
 
-const numberVariants = {
-  initial: { scale: 0, opacity: 0 },
-  animate: { 
-    scale: 1, 
-    opacity: 1,
-    transition: { delay: 1.2, duration: 0.6, type: "spring", stiffness: 200 }
+export default function CitationScene({ scrollProgress = 0 }: CitationSceneProps) {
+  const cardVariants = {
+    hidden: { opacity: 0, y: 30, scale: 0.98 },
+    visible: { opacity: 1, y: 0, scale: 1 }
   }
-}
 
-export default function CitationScene() {
   return (
-    <Scene>
-      <div className="bg-white border border-gray-200 rounded-md shadow-sm hover:shadow-md transition-shadow duration-200 w-full max-w-4xl">
-        {/* Reddit Post Header */}
-        <div className="flex items-center p-3 border-b border-gray-100">
-          <div className="flex items-center space-x-2">
-            <div className="w-6 h-6 bg-[#C6FF00] rounded-full flex items-center justify-center flex-shrink-0">
-              <span className="text-[#2B3D3B] text-xs font-bold">r</span>
-            </div>
-            <div className="flex flex-col">
-              <div className="flex items-center space-x-1">
-                <span className="text-sm font-medium text-gray-900">r/HowItWorks</span>
-              </div>
-              <div className="flex items-center space-x-1 text-xs text-gray-600">
-                <span>Posted by</span>
-                <span className="text-blue-600 hover:underline cursor-pointer">MyOasis.science</span>
-                <span>•</span>
-                <span>15 minutes ago</span>
-              </div>
-            </div>
-          </div>
-        </div>
+    <Scene scrollProgress={scrollProgress}>
+      <div className="w-full max-w-4xl">
+        <div className="text-gray-900">
+          <h2 className="text-3xl font-semibold mb-4 text-center">Track citation milestones in real-time</h2>
+          <p className="text-lg text-gray-800 mb-8 text-center">We notify you when relevant research hits key citation or impact thresholds.</p>
+          
+          <div className="space-y-8">
+            {/* Citation Examples */}
+            <div className="space-y-6">
+              {/* Self-Injury Study */}
+              <motion.div
+                className="bg-gradient-to-br from-white to-gray-100 p-6 rounded-lg border border-gray-200 shadow-md hover:scale-[1.02] transition-transform"
+                variants={cardVariants}
+                initial="hidden"
+                whileInView="visible"
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+                viewport={{ once: true, amount: 0.5 }}
+              >
+                <div className="flex items-start justify-between">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className="bg-sky-100 text-sky-800 text-xs px-2 py-1 rounded-sm shadow-sm font-medium">
+                        🧠 Clinical Research
+                      </div>
+                    </div>
+                    <h3 className="font-semibold text-xl text-gray-800 mb-2">
+                      "Self-Injury in College Youth"
+                    </h3>
+                    <p className="text-lg text-gray-800">Whitlock et al. • Pediatrics • 2006</p>
+                    <p className="text-sm text-gray-700 mt-2 italic">
+                      Crossed 1,000 citations — now a clinical and policy reference point.
+                    </p>
+                  </div>
+                  <div className="text-right">
+                    <div className="text-2xl font-bold text-blue-600">1,524</div>
+                    <div className="text-sm text-gray-500">citations</div>
+                  </div>
+                </div>
+              </motion.div>
 
-        {/* Reddit Post Content */}
-        <div className="flex">
-          {/* Vote Column */}
-          <div className="flex flex-col items-center w-10 bg-gray-50 py-2">
-            <button className="text-gray-500 hover:text-[#B2E600] hover:scale-110 transition-all duration-200 p-1 group cursor-pointer">
-              <svg className="w-5 h-5 group-hover:w-6 group-hover:h-6 group-hover:font-bold transition-all duration-200" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M3.293 9.707a1 1 0 010-1.414l6-6a1 1 0 011.414 0l6 6a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L4.707 9.707a1 1 0 01-1.414 0z" clipRule="evenodd" />
-              </svg>
-            </button>
-            <span className="text-xs font-medium py-1 text-gray-900">1.6k</span>
-            <button className="text-gray-500 hover:text-blue-500 hover:scale-110 transition-all duration-200 p-1 group cursor-pointer">
-              <svg className="w-5 h-5 group-hover:w-6 group-hover:h-6 group-hover:font-bold transition-all duration-200" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M16.707 10.293a1 1 0 010 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 111.414-1.414L9 14.586V3a1 1 0 012 0v11.586l4.293-4.293a1 1 0 011.414 0z" clipRule="evenodd" />
-              </svg>
-            </button>
-          </div>
+              {/* Laser Wakefield Acceleration */}
+              <motion.div
+                className="bg-gradient-to-br from-white to-gray-100 p-6 rounded-lg border border-gray-200 shadow-md hover:scale-[1.02] transition-transform"
+                variants={cardVariants}
+                initial="hidden"
+                whileInView="visible"
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+                viewport={{ once: true, amount: 0.5 }}
+              >
+                <div className="flex items-start justify-between">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className="bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-sm shadow-sm font-medium">
+                        ⚛️ Physics
+                      </div>
+                    </div>
+                    <h3 className="font-semibold text-xl text-gray-800 mb-2">
+                      "Laser Wakefield Electron Beams"
+                    </h3>
+                    <p className="text-lg text-gray-800">Nature • 2004</p>
+                    <p className="text-sm text-gray-700 mt-2 italic">
+                      Surpassed 1,000 citations — now a core method in compact particle physics.
+                    </p>
+                  </div>
+                  <div className="text-right">
+                    <div className="text-2xl font-bold text-green-600">2,699</div>
+                    <div className="text-sm text-gray-500">citations</div>
+                  </div>
+                </div>
+              </motion.div>
 
-          {/* Main Content */}
-          <div className="flex-1 p-4">
-            <div className="text-gray-900">
-              <h2 className="text-2xl font-semibold mb-4">Scientific research that has hit key citation milestones that week</h2>
-              
-              <div className="flex justify-center">
-                <motion.div
-                  variants={citationVariants}
-                  initial="initial"
-                  animate="animate"
-                  className="bg-blue-50 p-6 rounded-lg border-2 border-blue-200 text-center"
-                >
-                  <h3 className="font-semibold text-gray-900 mb-3">Breakthrough Paper Title</h3>
-                  <p className="text-sm text-gray-600 mb-4">Authors et al. • Nature • 2023</p>
-                  
-                  <motion.div
-                    variants={numberVariants}
-                    initial="initial"
-                    animate="animate"
-                    className="text-4xl font-bold text-blue-600"
-                  >
-                    1,000
-                  </motion.div>
-                  <p className="text-sm text-gray-600 mt-2">citations reached this week!</p>
-                </motion.div>
-              </div>
+              {/* Addison Chemistry Paper */}
+              <motion.div
+                className="bg-gradient-to-br from-white to-gray-100 p-6 rounded-lg border border-gray-200 shadow-md hover:scale-[1.02] transition-transform"
+                variants={cardVariants}
+                initial="hidden"
+                whileInView="visible"
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
+                viewport={{ once: true, amount: 0.5 }}
+              >
+                <div className="flex items-start justify-between">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-sm shadow-sm font-medium">
+                        🧪 Chemistry
+                      </div>
+                    </div>
+                    <h3 className="font-semibold text-xl text-gray-800 mb-2">
+                      "Copper(II) Complex Structures"
+                    </h3>
+                    <p className="text-lg text-gray-800">Addison et al. • J. Chem. Soc. • 1984</p>
+                    <p className="text-sm text-gray-700 mt-2 italic">
+                      Exceeded 5,000 citations — textbook-standard in materials chemistry.
+                    </p>
+                  </div>
+                  <div className="text-right">
+                    <div className="text-2xl font-bold text-purple-600">6,721</div>
+                    <div className="text-sm text-gray-500">citations</div>
+                  </div>
+                </div>
+              </motion.div>
             </div>
           </div>
-        </div>
-
-        {/* Reddit Post Footer */}
-        <div className="flex items-center justify-between px-4 py-2 border-t border-gray-100 bg-gray-50">
-          <div className="flex items-center space-x-4">
-            <button className="flex items-center space-x-1 text-gray-600 hover:bg-gray-200 px-2 py-1 rounded transition-colors">
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd" />
-              </svg>
-              <span className="text-sm">89 Comments</span>
-            </button>
-            <button className="flex items-center space-x-1 text-gray-600 hover:bg-gray-200 px-2 py-1 rounded transition-colors">
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z" />
-              </svg>
-              <span className="text-sm">Share</span>
-            </button>
-            <button className="flex items-center space-x-1 text-gray-600 hover:bg-gray-200 px-2 py-1 rounded transition-colors">
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              <span className="text-sm">Save</span>
-            </button>
-          </div>
-          <button className="text-gray-600 hover:bg-gray-200 p-1 rounded transition-colors">
-            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
-            </svg>
-          </button>
         </div>
       </div>
     </Scene>

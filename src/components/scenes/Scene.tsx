@@ -2,9 +2,10 @@ import { motion } from "framer-motion"
 
 interface SceneProps {
   children: React.ReactNode
+  scrollProgress?: number
 }
 
-export default function Scene({ children }: SceneProps) {
+export default function Scene({ children, scrollProgress = 0 }: SceneProps) {
   return (
     <motion.section
       className="flex flex-col items-center gap-6 p-6 text-center"
