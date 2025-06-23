@@ -1,4 +1,4 @@
-# Story Scenes
+# Story Scenes.
 
 This directory contains the individual scene components for the MyOasis.science landing page story section.
 
