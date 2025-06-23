@@ -94,7 +94,7 @@ export default function TrustedBy() {
               height={32}
               className="rounded-full object-cover border border-gray-200"
             />
-            Mohan Smith <span className="text-gray-500 font-normal">– Statistics Lead @ Revalue</span>
+            Mohan Smith <span className="text-gray-700 font-medium">– Statistics Lead @ Revalue</span>
           </a>
         </figcaption>
       </figure>

@@ -15,6 +15,7 @@ interface RedditCardProps {
   comments?: number;
   isSticky?: boolean;
   className?: string;
+  id?: string;
 }
 
 export default function RedditCard({
@@ -27,7 +28,8 @@ export default function RedditCard({
   upvotes = 1337,
   comments = 42,
   isSticky = false,
-  className = ""
+  className = "",
+  id
 }: RedditCardProps) {
   const [voteCount, setVoteCount] = useState(upvotes);
   const [userVote, setUserVote] = useState<'up' | 'down' | null>(null);
@@ -77,6 +79,7 @@ export default function RedditCard({
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       className={`max-w-4xl mx-auto mb-4 ${className}`}
+      id={id}
     >
       <div className="bg-white border border-gray-200 rounded-md shadow-sm hover:shadow-md transition-shadow duration-200">
         {/* Reddit Post Header */}
