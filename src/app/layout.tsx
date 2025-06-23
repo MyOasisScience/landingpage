@@ -3,8 +3,6 @@
 // import type { Metadata } from "next";
 import { Space_Mono } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/header";
-import { Footer } from "@/components/footer";
 import { cn } from "@/lib/utils";
 
 const spaceMono = Space_Mono({
@@ -19,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full bg-[#F0F5FF]">
+    <html lang="en" className="h-full">
       <head>
         <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png" />
@@ -29,14 +27,12 @@ export default function RootLayout({
       <body
         className={cn(
           spaceMono.variable,
-          "flex min-h-screen flex-col font-sans antialiased bg-[#F3F2ED]"
+          "flex min-h-screen flex-col font-sans antialiased"
         )}
       >
-        <Header />
         <main className="flex-1">
           {children}
         </main>
-        <Footer />
       </body>
     </html>
   );
