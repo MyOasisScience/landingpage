@@ -771,3 +771,73 @@
     --ring: var(--brand-400);
   }
 }
+
+/* Mobile-specific improvements */
+@media (max-width: 768px) {
+  /* Improve touch targets */
+  button, a, [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Prevent horizontal scroll */
+  body {
+    overflow-x: hidden;
+  }
+  
+  /* Improve text readability on mobile */
+  p, li {
+    line-height: 1.6;
+  }
+  
+  /* Better spacing for mobile */
+  .space-y-6 > * + * {
+    margin-top: 1.5rem;
+  }
+  
+  /* Improve form elements on mobile */
+  input, select, textarea {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+}
+
+/* Ensure proper viewport behavior */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* Improve scrolling performance */
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Ensure images don't overflow on mobile */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Better focus states for accessibility */
+button:focus, a:focus, input:focus, select:focus, textarea:focus {
+  outline: 2px solid #C6FF00;
+  outline-offset: 2px;
+}
+
+/* Disable text selection on interactive elements */
+button, a {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Allow text selection on content areas */
+p, h1, h2, h3, h4, h5, h6, li, span {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}

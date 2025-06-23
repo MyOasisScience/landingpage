@@ -8,7 +8,7 @@ interface SceneProps {
 export default function Scene({ children }: SceneProps) {
   return (
     <motion.section
-      className="flex flex-col items-center gap-6 p-6 text-center"
+      className="flex flex-col items-center gap-4 sm:gap-6 p-4 sm:p-6 text-center"
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.9 }}

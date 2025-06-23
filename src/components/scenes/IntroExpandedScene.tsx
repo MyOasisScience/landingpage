@@ -30,12 +30,6 @@ export default function IntroExpandedScene({ scrollProgress = 0 }: IntroExpanded
               <div className="flex items-center space-x-1">
                 <span className="text-sm font-medium text-gray-900">r/HowItWorks</span>
               </div>
-              <div className="flex items-center space-x-1 text-xs text-gray-800">
-                <span>Posted by</span>
-                <span className="text-blue-600 hover:underline cursor-pointer">MyOasis.science</span>
-                <span>•</span>
-                <span>15 minutes ago</span>
-              </div>
             </div>
           </div>
         </motion.div>
@@ -62,13 +56,13 @@ export default function IntroExpandedScene({ scrollProgress = 0 }: IntroExpanded
 
           {/* Main Content */}
           <motion.div
-            className="flex-1 p-6"
+            className="flex-1 p-4 sm:p-6"
           >
             <div className="text-gray-900">
-              <h2 className="text-3xl font-semibold mb-4">
+              <h2 className="text-2xl sm:text-3xl font-semibold mb-3 sm:mb-4">
                 1. Tell us what you&apos;re working on
               </h2>
-              <p className="text-lg text-gray-700">
+              <p className="text-base sm:text-lg text-gray-700">
                 We&apos;ll reach out to understand your focus, goals, and what insights matter most to you.
               </p>
             </div>
@@ -80,31 +74,7 @@ export default function IntroExpandedScene({ scrollProgress = 0 }: IntroExpanded
           className="flex items-center justify-between px-4 py-2 border-t border-gray-100 bg-gray-50"
           style={{ opacity: 1 - scrollProgress }}
         >
-          <div className="flex items-center space-x-4">
-            <button className="flex items-center space-x-1 text-gray-800 hover:bg-gray-200 px-2 py-1 rounded transition-colors">
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd" />
-              </svg>
-              <span className="text-sm">89 Comments</span>
-            </button>
-            <button className="flex items-center space-x-1 text-gray-800 hover:bg-gray-200 px-2 py-1 rounded transition-colors">
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z" />
-              </svg>
-              <span className="text-sm">Share</span>
-            </button>
-            <button className="flex items-center space-x-1 text-gray-800 hover:bg-gray-200 px-2 py-1 rounded transition-colors">
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              <span className="text-sm">Save</span>
-            </button>
-          </div>
-          <button className="text-gray-800 hover:bg-gray-200 p-1 rounded transition-colors">
-            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
-            </svg>
-          </button>
+          {/* Footer content removed - keeping only the styling for card appearance */}
         </motion.div>
       </motion.div>
     </Scene>

@@ -41,19 +41,23 @@ export default function Home() {
       {/* Reddit-style header */}
       <div className="bg-white border-b border-gray-200 sticky top-0 z-50">
         <div className="max-w-4xl mx-auto px-4 py-3">
-          <div className="flex items-center space-x-4">
+          <div className="flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 sm:space-x-4">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-[#C6FF00] rounded-full flex items-center justify-center">
-                <span className="text-[#2B3D3B] text-sm font-bold">r</span>
-              </div>
+              <Image
+                src="/images/logo.png"
+                alt="MyOasis.science logo"
+                width={32}
+                height={32}
+                className="w-8 h-8 object-contain"
+              />
               <span className="text-lg font-bold text-gray-900">MyOasis.science</span>
             </div>
-            <div className="flex-1">
-              <div className="max-w-md relative">
+            <div className="flex-1 w-full sm:w-auto">
+              <div className="max-w-md relative w-full">
                 <input 
                   type="text" 
                   placeholder="Search r/MyOasis.science" 
-                  className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#C6FF00] focus:border-transparent"
+                  className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#C6FF00] focus:border-transparent"
                   onFocus={() => setIsDropdownOpen(true)}
                   onBlur={() => setTimeout(() => setIsDropdownOpen(false), 200)}
                 />
@@ -64,7 +68,7 @@ export default function Home() {
                         <button
                           key={section.id}
                           onClick={() => scrollToSection(section.id)}
-                          className="w-full px-4 py-2 text-left text-sm hover:bg-gray-50 flex items-center space-x-2"
+                          className="w-full px-4 py-3 text-left text-sm hover:bg-gray-50 flex items-center space-x-2"
                         >
                           <div className="w-4 h-4 bg-[#C6FF00] rounded-full flex items-center justify-center">
                             <span className="text-[#2B3D3B] text-xs font-bold">r</span>
@@ -79,7 +83,7 @@ export default function Home() {
             </div>
             <a 
               href="#cta-card" 
-              className="bg-[#C6FF00] text-[#2B3D3B] px-4 py-1.5 rounded-full text-sm font-medium hover:bg-[#B2E600] transition-colors cursor-pointer"
+              className="bg-[#C6FF00] text-[#2B3D3B] px-6 py-2 rounded-full text-sm font-medium hover:bg-[#B2E600] transition-colors cursor-pointer whitespace-nowrap"
             >
               Create Newsletter
             </a>

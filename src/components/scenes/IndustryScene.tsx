@@ -11,14 +11,14 @@ export default function IndustryScene({ scrollProgress = 0 }: IndustrySceneProps
     <Scene scrollProgress={scrollProgress}>
       <div className="w-full max-w-4xl mx-auto">
         <div className="text-gray-900">
-          <h2 className="text-3xl font-semibold mb-6 text-center">Monitor industry developments</h2>
-          <p className="text-lg text-gray-800 text-center mb-10">We surface major industry research and reports</p>
+          <h2 className="text-2xl sm:text-3xl font-semibold mb-4 sm:mb-6 text-center">Monitor industry developments</h2>
+          <p className="text-base sm:text-lg text-gray-800 text-center mb-6 sm:mb-10">We surface major industry research and reports</p>
 
-          <div className="space-y-10">
+          <div className="space-y-6 sm:space-y-10">
             {/* Industry Report Images */}
-            <div className="flex justify-center space-x-8">
+            <div className="flex flex-row justify-center space-x-4 sm:space-x-8">
               <motion.div
-                className="max-w-sm"
+                className="w-32 sm:w-auto sm:max-w-sm"
                 style={{
                   opacity: Math.max(0, (scrollProgress - 0.1) / 0.2),
                   transform: `translateY(${(1 - Math.max(0, (scrollProgress - 0.1) / 0.2)) * 30}px)`
@@ -34,7 +34,7 @@ export default function IndustryScene({ scrollProgress = 0 }: IndustrySceneProps
               </motion.div>
               
               <motion.div
-                className="max-w-sm"
+                className="w-32 sm:w-auto sm:max-w-sm"
                 style={{
                   opacity: Math.max(0, (scrollProgress - 0.4) / 0.2),
                   transform: `translateY(${(1 - Math.max(0, (scrollProgress - 0.4) / 0.2)) * 30}px)`

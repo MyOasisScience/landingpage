@@ -47,13 +47,22 @@ export default function TrustedBy() {
       {/* Main Logo Bar */}
       <div className="flex flex-wrap justify-center items-center gap-8 w-full py-4">
         {mainLogos.map((logo) => (
-          <div key={logo.name} className="flex items-center h-12 md:h-16">
+          <div 
+            key={logo.name} 
+            className="flex items-center justify-center h-12 md:h-16 w-20 md:w-40 flex-shrink-0"
+          >
             <Image
               src={logo.src}
               alt={logo.alt}
               width={120}
               height={64}
-              className="object-contain h-full w-auto grayscale hover:grayscale-0 transition-all duration-200"
+              className="object-contain grayscale hover:grayscale-0 transition-all duration-200"
+              style={{ 
+                maxHeight: '100%', 
+                maxWidth: '100%',
+                height: 'auto',
+                width: 'auto'
+              }}
             />
           </div>
         ))}
@@ -62,13 +71,22 @@ export default function TrustedBy() {
       {/* Secondary Logo Bar */}
       <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8 w-full py-2">
         {secondaryLogos.map((logo) => (
-          <div key={logo.name} className="flex items-center h-6 md:h-8">
+          <div 
+            key={logo.name} 
+            className="flex items-center justify-center h-6 md:h-8 w-16 md:w-20 flex-shrink-0"
+          >
             <Image
               src={logo.src}
               alt={logo.alt}
               width={60}
               height={32}
-              className="object-contain h-full w-auto grayscale hover:grayscale-0 transition-all duration-200"
+              className="object-contain grayscale hover:grayscale-0 transition-all duration-200"
+              style={{ 
+                maxHeight: '100%', 
+                maxWidth: '100%',
+                height: 'auto',
+                width: 'auto'
+              }}
             />
           </div>
         ))}
@@ -92,7 +110,7 @@ export default function TrustedBy() {
               alt="Mohan Smith"
               width={32}
               height={32}
-              className="rounded-full object-cover border border-gray-200"
+              className="rounded-full object-contain object-center border border-gray-200"
             />
             Mohan Smith <span className="text-gray-700 font-medium">– Statistics Lead @ Revalue</span>
           </a>

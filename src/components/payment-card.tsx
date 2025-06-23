@@ -13,10 +13,10 @@ export function PaymentCard() {
   return (
     <div className="relative w-full">
       {/* Card Content */}
-      <div className="relative z-10 p-6 md:p-8">
+      <div className="relative z-10 p-4 sm:p-6 md:p-8">
         {/* Status Chip */}
         <div className="flex justify-center mb-6">
-          <h3 className="text-lg md:text-xl font-medium text-gray-800 mb-2 text-center">
+          <h3 className="text-base sm:text-lg md:text-xl font-medium text-gray-800 mb-2 text-center">
             Founding Member Access — 50% Off for the first 3 years. 
           </h3>
         </div>
@@ -67,7 +67,7 @@ export function PaymentCard() {
 
         {/* Plan Selection and CTA Button */}
         <div className="flex flex-col items-center gap-4 mb-4">
-          <div className="flex flex-col sm:flex-row items-center gap-3">
+          <div className="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
             <label htmlFor="plan-select-payment" className="text-sm font-medium text-gray-800">
               Choose your plan:
             </label>
@@ -75,7 +75,7 @@ export function PaymentCard() {
               id="plan-select-payment" 
               value={selectedPlan}
               onChange={(e) => setSelectedPlan(e.target.value)}
-              className="px-3 py-2 border border-gray-300 rounded-lg bg-white text-gray-800 font-medium focus:outline-none focus:ring-2 focus:ring-[#C6FF00] focus:border-transparent"
+              className="px-3 py-2 border border-gray-300 rounded-lg bg-white text-gray-800 font-medium focus:outline-none focus:ring-2 focus:ring-[#C6FF00] focus:border-transparent w-full sm:w-auto min-h-[44px]"
             >
               <option value="monthly">Monthly – £5</option>
               <option value="annual">Annual – £50</option>
@@ -86,7 +86,7 @@ export function PaymentCard() {
             href={stripeLinks[selectedPlan as keyof typeof stripeLinks]}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative px-8 py-3 rounded-full text-[#2B3D3B] font-medium
+            className="group relative px-6 sm:px-8 py-3 rounded-full text-[#2B3D3B] font-medium
                      bg-[#C6FF00] hover:bg-[#B2E600]
                      active:bg-[#9ECC00]
                      border border-[#C6FF00]/50
@@ -94,7 +94,8 @@ export function PaymentCard() {
                      hover:shadow-md 
                      active:shadow-inner
                      transition-all duration-200
-                     active:translate-y-0.5"
+                     active:translate-y-0.5
+                     min-h-[44px] flex items-center justify-center w-full sm:w-auto"
           >
             <span className="relative z-10 text-center block">
               Become a Founding Member

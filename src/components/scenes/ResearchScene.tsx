@@ -16,22 +16,23 @@ export default function ResearchScene({ scrollProgress = 0 }: ResearchSceneProps
     <Scene scrollProgress={scrollProgress}>
       <div className="w-full max-w-4xl">
         <div className="text-gray-900">
-          <h2 className="text-3xl font-semibold mb-8 text-center">Stay on top of new research</h2>
-          <p className="text-lg text-gray-800 text-center mb-8">Get notified about important scientific papers released this week.</p>
+          <h2 className="text-2xl sm:text-3xl font-semibold mb-4 sm:mb-6 text-center">Stay on top of new research</h2>
+          <p className="text-base sm:text-lg text-gray-800 text-center mb-4 sm:mb-6">Get notified about important scientific papers released this week.</p>
           
-          <div className="space-y-6 mb-8">
-            {/* Research Papers - Masonry Layout */}
-            <div className="grid grid-cols-2 gap-8 max-w-2xl mx-auto">
+          <div className="space-y-4 sm:space-y-6 mb-4 sm:mb-6">
+            {/* Research Papers - Single on mobile, two on desktop */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 max-w-2xl mx-auto">
+              {/* First paper - always visible */}
               <div>
                 <motion.div
-                  className="relative w-full aspect-[3/2] bg-gradient-to-br from-white to-gray-100 border border-gray-200 shadow-md rounded-lg overflow-hidden hover:scale-[1.02] transition-transform"
+                  className="relative w-full aspect-[4/3] sm:aspect-[3/2] bg-gradient-to-br from-white to-gray-100 border border-gray-200 shadow-md rounded-lg overflow-hidden hover:scale-[1.02] transition-transform"
                   variants={paperVariants}
                   initial="hidden"
                   whileInView="visible"
                   transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
                   viewport={{ once: true, amount: 0.5 }}
                 >
-                  <div className="absolute top-2 right-2 bg-sky-100 text-sky-800 text-xs px-2 py-1 rounded-sm shadow-sm font-medium">
+                  <div className="absolute top-1 sm:top-2 right-1 sm:right-2 bg-sky-100 text-sky-800 text-xs px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-sm shadow-sm font-medium">
                     🧠 Medical AI
                   </div>
                   <Image 
@@ -39,19 +40,20 @@ export default function ResearchScene({ scrollProgress = 0 }: ResearchSceneProps
                     alt="Research Paper 1" 
                     width={300}
                     height={200}
-                    className="w-full h-full object-contain p-3"
+                    className="w-full h-full object-contain p-2 sm:p-3"
                   />
                 </motion.div>
-                <div className="text-center mt-2">
-                  <div className="text-xs font-semibold text-gray-700 bg-white/90 px-3 py-1.5 rounded-md shadow-sm border border-gray-200 inline-block">
+                <div className="text-center mt-1 sm:mt-2">
+                  <div className="text-xs font-semibold text-gray-700 bg-white/90 px-2 sm:px-3 py-1 sm:py-1.5 rounded-md shadow-sm border border-gray-200 inline-block">
                     AI boosts Parkinson&apos;s treatment
                   </div>
                 </div>
               </div>
               
-              <div>
+              {/* Second paper - hidden on mobile, visible on desktop */}
+              <div className="hidden sm:block">
                 <motion.div
-                  className="relative w-full aspect-[3/2] bg-gradient-to-br from-white to-gray-100 border border-gray-200 shadow-md rounded-lg overflow-hidden hover:scale-[1.02] transition-transform mt-12"
+                  className="relative w-full aspect-[3/2] bg-gradient-to-br from-white to-gray-100 border border-gray-200 shadow-md rounded-lg overflow-hidden hover:scale-[1.02] transition-transform sm:mt-12"
                   variants={paperVariants}
                   initial="hidden"
                   whileInView="visible"
