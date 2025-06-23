@@ -1,15 +1,14 @@
 import AnimatedText from "@/components/animations/animated-text";
 import "react-tooltip/dist/react-tooltip.css";
 import Hero from "@/components/hero";
-import HowItWorks from "@/components/howitworks";
 import AboutUs from "@/components/aboutus";
 import ContactUs from "@/components/contactus";
 import ClientSubheadingWrapper from "@/components/ClientSubheadingWrapper";
 import TrustedBy from "@/components/trusted-by";
 import RedditCard from "@/components/reddit-card";
 import { PaymentCard } from "@/components/payment-card";
-import { PaymentCard2 } from "@/components/ctacardjustbutton";
-import ExpandableCard from "@/components/expandable-card";
+import StoryTrigger from "@/components/StoryTrigger";
+import StorySection from "@/components/StorySection";
 
 
 export default function Home() {
@@ -41,7 +40,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Reddit-style content area */}
+      {/* Content before story */}
       <div className="max-w-4xl mx-auto px-4 py-6">
         {/* Hero Section */}
         <RedditCard 
@@ -69,9 +68,24 @@ export default function Home() {
           <ClientSubheadingWrapper />
         </RedditCard>
 
-        {/* Expandable Card */}
-        <ExpandableCard />
+        {/* Story Trigger */}
+        <RedditCard 
+          title=""
+          subreddit="r/HowItWorks"
+          author="MyOasis.science"
+          timestamp="15 minutes ago"
+          upvotes={1567}
+          comments={89}
+        >
+          <StoryTrigger />
+        </RedditCard>
+      </div>
 
+      {/* Story Section - sticky scrollytelling */}
+      <StorySection />
+
+      {/* Content after story */}
+      <div className="max-w-4xl mx-auto px-4 py-6">
         {/* CTA Card */}
         <RedditCard 
           title=""
@@ -139,7 +153,6 @@ export default function Home() {
             <PaymentCard />
           </AnimatedText>
         </RedditCard>
-
       </div>
     </div>
   );
