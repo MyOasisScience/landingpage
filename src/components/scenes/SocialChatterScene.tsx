@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import Image from "next/image"
 import Scene from "./Scene"
 
 interface SocialChatterSceneProps {
@@ -20,9 +21,11 @@ export default function SocialChatterScene({ scrollProgress = 0 }: SocialChatter
 
         {/* Social Media UMAP Graph */}
         <div className="relative">
-          <img 
+          <Image 
             src="/images/Social_media_umap.png" 
             alt="Social Media UMAP Visualization" 
+            width={800}
+            height={600}
             className="w-full max-w-4xl mx-auto rounded-lg shadow-lg"
           />
           
@@ -36,9 +39,11 @@ export default function SocialChatterScene({ scrollProgress = 0 }: SocialChatter
             }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <img 
+            <Image 
               src="/images/Reddit_influencer_post.png" 
               alt="Reddit Influencer Post" 
+              width={160}
+              height={120}
               className="w-40 h-auto rounded-lg shadow-xl border-2 border-purple-300"
             />
           </motion.div>
@@ -53,9 +58,11 @@ export default function SocialChatterScene({ scrollProgress = 0 }: SocialChatter
             }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <img 
+            <Image 
               src="/images/Reddit_influencer_post.png" 
               alt="Reddit Influencer Post" 
+              width={256}
+              height={192}
               className="w-64 h-auto rounded-lg shadow-xl border-2 border-purple-300"
             />
           </motion.div>

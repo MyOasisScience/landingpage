@@ -32,7 +32,7 @@ export default function TrendsScene({ scrollProgress = 0 }: TrendsSceneProps) {
               <p className="text-blue-800 text-md font-medium">
                 Experiment with MoE (Mixture of Experts) tuning for cost efficiency
                 <br />
-                → Google's latest Gemini work shows MoE tuning reduces compute costs by 38%. Try it on your fine-tuning workload with LoRA and gated routing.
+                → Google&apos;s latest Gemini work shows MoE tuning reduces compute costs by 38%. Try it on your fine-tuning workload with LoRA and gated routing.
               </p>
             </motion.div>
 
@@ -56,9 +56,9 @@ export default function TrendsScene({ scrollProgress = 0 }: TrendsSceneProps) {
               }}
             >
               <p className="text-purple-800 text-md font-medium">
-                Adapt your R&D to align with BioNTech's programmable biology fund
+                Adapt your R&D to align with BioNTech&apos;s programmable biology fund
                 <br />
-                → They're backing startups focused on DNA assembly platforms and programmable vaccine development. Position your product as compatible with open mRNA tech stacks.
+                → They&apos;re backing startups focused on DNA assembly platforms and programmable vaccine development. Position your product as compatible with open mRNA tech stacks.
               </p>
             </motion.div>
 

@@ -5,7 +5,7 @@ interface SceneProps {
   scrollProgress?: number
 }
 
-export default function Scene({ children, scrollProgress = 0 }: SceneProps) {
+export default function Scene({ children }: SceneProps) {
   return (
     <motion.section
       className="flex flex-col items-center gap-6 p-6 text-center"

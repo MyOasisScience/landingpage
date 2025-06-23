@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import AnimatedText from "@/components/animations/animated-text";
 import "react-tooltip/dist/react-tooltip.css";
 import Hero from "@/components/hero";
@@ -212,9 +213,11 @@ export default function Home() {
           comments={42}
         >
           <div className="flex justify-center">
-            <img 
+            <Image 
               src="/images/meme.png" 
               alt="Meme" 
+              width={500}
+              height={300}
               className="max-w-full h-auto rounded-lg"
             />
           </div>

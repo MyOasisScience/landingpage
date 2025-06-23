@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import Image from "next/image"
 import Scene from "./Scene"
 
 interface IndustrySceneProps {
@@ -23,9 +24,11 @@ export default function IndustryScene({ scrollProgress = 0 }: IndustrySceneProps
                   transform: `translateY(${(1 - Math.max(0, (scrollProgress - 0.1) / 0.2)) * 30}px)`
                 }}
               >
-                <img 
+                <Image 
                   src="/images/IndustryReport1.png" 
                   alt="Industry Report 1" 
+                  width={400}
+                  height={300}
                   className="w-full h-auto rounded-lg shadow-md"
                 />
               </motion.div>
@@ -37,9 +40,11 @@ export default function IndustryScene({ scrollProgress = 0 }: IndustrySceneProps
                   transform: `translateY(${(1 - Math.max(0, (scrollProgress - 0.4) / 0.2)) * 30}px)`
                 }}
               >
-                <img 
+                <Image 
                   src="/images/IndustryReport2.png" 
                   alt="Industry Report 2" 
+                  width={400}
+                  height={300}
                   className="w-full h-auto rounded-lg shadow-md"
                 />
               </motion.div>

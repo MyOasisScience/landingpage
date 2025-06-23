@@ -1,10 +1,4 @@
-import { motion } from "framer-motion"
-
-interface ReadAndRefineFinalSceneProps {
-  scrollProgress?: number
-}
-
-export default function ReadAndRefineFinalScene({ scrollProgress = 0 }: ReadAndRefineFinalSceneProps) {
+export default function ReadAndRefineFinalScene() {
   return (
     <div className="flex flex-col items-center gap-6 p-6 text-center">
       <div className="bg-white border border-gray-200 rounded-md shadow-sm w-full max-w-4xl">
@@ -52,7 +46,7 @@ export default function ReadAndRefineFinalScene({ scrollProgress = 0 }: ReadAndR
                 3. Read and Refine
               </h2>
               <p className="text-lg text-gray-700">
-                Reply with feedback any time, and we'll fine-tune your brief to make sure it delivers exactly what's useful to you.
+                Reply with feedback any time, and we&apos;ll fine-tune your brief to make sure it delivers exactly what&apos;s useful to you.
               </p>
             </div>
           </div>

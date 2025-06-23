@@ -38,7 +38,7 @@ export default function CitationScene({ scrollProgress = 0 }: CitationSceneProps
                       </div>
                     </div>
                     <h3 className="font-semibold text-xl text-gray-800 mb-2">
-                      "Self-Injury in College Youth"
+                      &ldquo;Self-Injury in College Youth&rdquo;
                     </h3>
                     <p className="text-lg text-gray-800">Whitlock et al. • Pediatrics • 2006</p>
                     <p className="text-sm text-gray-700 mt-2 italic">
@@ -69,7 +69,7 @@ export default function CitationScene({ scrollProgress = 0 }: CitationSceneProps
                       </div>
                     </div>
                     <h3 className="font-semibold text-xl text-gray-800 mb-2">
-                      "Laser Wakefield Electron Beams"
+                      &ldquo;Laser Wakefield Electron Beams&rdquo;
                     </h3>
                     <p className="text-lg text-gray-800">Nature • 2004</p>
                     <p className="text-sm text-gray-700 mt-2 italic">
@@ -100,7 +100,7 @@ export default function CitationScene({ scrollProgress = 0 }: CitationSceneProps
                       </div>
                     </div>
                     <h3 className="font-semibold text-xl text-gray-800 mb-2">
-                      "Copper(II) Complex Structures"
+                      &ldquo;Copper(II) Complex Structures&rdquo;
                     </h3>
                     <p className="text-lg text-gray-800">Addison et al. • J. Chem. Soc. • 1984</p>
                     <p className="text-sm text-gray-700 mt-2 italic">
