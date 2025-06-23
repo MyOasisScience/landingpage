@@ -16,6 +16,7 @@ import StorySection from "@/components/StorySection";
 
 export default function Home() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const subredditSections = [
     { name: "r/hero", id: "hero" },
@@ -34,6 +35,7 @@ export default function Home() {
       element.scrollIntoView({ behavior: "smooth" });
     }
     setIsDropdownOpen(false);
+    setIsMobileMenuOpen(false);
   };
 
   return (
@@ -41,7 +43,8 @@ export default function Home() {
       {/* Reddit-style header */}
       <div className="bg-white border-b border-gray-200 sticky top-0 z-50">
         <div className="max-w-4xl mx-auto px-4 py-3">
-          <div className="flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 sm:space-x-4">
+          <div className="flex items-center justify-between">
+            {/* Logo */}
             <div className="flex items-center space-x-2">
               <Image
                 src="/images/logo.png"
@@ -52,7 +55,9 @@ export default function Home() {
               />
               <span className="text-lg font-bold text-gray-900">MyOasis.science</span>
             </div>
-            <div className="flex-1 w-full sm:w-auto">
+
+            {/* Desktop Navigation */}
+            <div className="hidden sm:flex items-center space-x-4 flex-1 justify-center">
               <div className="max-w-md relative w-full">
                 <input 
                   type="text" 
@@ -81,13 +86,92 @@ export default function Home() {
                 )}
               </div>
             </div>
-            <a 
-              href="#cta-card" 
-              className="bg-[#C6FF00] text-[#2B3D3B] px-6 py-2 rounded-full text-sm font-medium hover:bg-[#B2E600] transition-colors cursor-pointer whitespace-nowrap"
+
+            {/* Desktop CTA */}
+            <div className="hidden sm:block">
+              <a 
+                href="#cta-card" 
+                className="bg-[#C6FF00] text-[#2B3D3B] px-6 py-2 rounded-full text-sm font-medium hover:bg-[#B2E600] transition-colors cursor-pointer whitespace-nowrap"
+              >
+                Create Newsletter
+              </a>
+            </div>
+
+            {/* Mobile Burger Menu Button */}
+            <button
+              className="sm:hidden p-2 rounded-md hover:bg-gray-100 transition-colors"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle mobile menu"
             >
-              Create Newsletter
-            </a>
+              <svg
+                className="w-6 h-6 text-gray-700"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                {isMobileMenuOpen ? (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                ) : (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                )}
+              </svg>
+            </button>
           </div>
+
+          {/* Mobile Menu */}
+          {isMobileMenuOpen && (
+            <div className="sm:hidden mt-4 pb-4 border-t border-gray-200 pt-4">
+              <div className="space-y-4">
+                {/* Mobile Search */}
+                <div className="relative">
+                  <input 
+                    type="text" 
+                    placeholder="Search r/MyOasis.science" 
+                    className="w-full px-3 py-3 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#C6FF00] focus:border-transparent"
+                    onFocus={() => setIsDropdownOpen(true)}
+                    onBlur={() => setTimeout(() => setIsDropdownOpen(false), 200)}
+                  />
+                  {isDropdownOpen && (
+                    <div className="absolute top-full left-0 right-0 bg-white border border-gray-200 rounded-md shadow-lg z-50 mt-1 max-h-60 overflow-y-auto">
+                      <div className="py-2">
+                        {subredditSections.map((section) => (
+                          <button
+                            key={section.id}
+                            onClick={() => scrollToSection(section.id)}
+                            className="w-full px-4 py-3 text-left text-sm hover:bg-gray-50 flex items-center space-x-2"
+                          >
+                            <div className="w-4 h-4 bg-[#C6FF00] rounded-full flex items-center justify-center">
+                              <span className="text-[#2B3D3B] text-xs font-bold">r</span>
+                            </div>
+                            <span className="text-gray-700">{section.name}</span>
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Mobile CTA */}
+                <a 
+                  href="#cta-card" 
+                  className="block w-full bg-[#C6FF00] text-[#2B3D3B] px-6 py-3 rounded-full text-sm font-medium hover:bg-[#B2E600] transition-colors cursor-pointer text-center"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Create Newsletter
+                </a>
+              </div>
+            </div>
+          )}
         </div>
       </div>
 
