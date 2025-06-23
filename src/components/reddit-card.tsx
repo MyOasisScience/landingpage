@@ -21,12 +21,9 @@ interface RedditCardProps {
 export default function RedditCard({
   children,
   title,
-  author = "MyOasis.science",
   subreddit = "MyOasis.science",
   subredditImage,
-  timestamp = "now",
   upvotes = 1337,
-  comments = 42,
   isSticky = false,
   className = "",
   id
