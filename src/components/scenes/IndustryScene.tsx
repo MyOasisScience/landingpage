@@ -1,10 +1,17 @@
+import { motion } from "framer-motion"
 import Scene from "./Scene"
 
-interface IntroSceneProps {
-  onNext?: () => void
+const reportVariants = {
+  initial: { x: -100, opacity: 0, rotateY: -15 },
+  animate: { 
+    x: 0, 
+    opacity: 1, 
+    rotateY: 0,
+    transition: { delay: 0.5, duration: 1.2, ease: "easeOut" }
+  }
 }
 
-export default function IntroScene({ onNext }: IntroSceneProps) {
+export default function IndustryScene() {
   return (
     <Scene>
       <div className="bg-white border border-gray-200 rounded-md shadow-sm hover:shadow-md transition-shadow duration-200 w-full max-w-4xl">
@@ -48,10 +55,24 @@ export default function IntroScene({ onNext }: IntroSceneProps) {
           {/* Main Content */}
           <div className="flex-1 p-4">
             <div className="text-gray-900">
-              <h2 className="text-3xl font-semibold mb-4">Tell us what you&apos;re working on</h2>
-              <p className="text-lg text-gray-700">
-                We&apos;ll reach out to understand your focus, goals, and what insights matter most to you.
-              </p>
+              <h2 className="text-2xl font-semibold mb-4">Recent industry & corporate developments</h2>
+              
+              <div className="flex justify-center">
+                <motion.div
+                  variants={reportVariants}
+                  initial="initial"
+                  animate="animate"
+                  className="bg-green-50 p-6 rounded-lg border-2 border-green-200 max-w-md"
+                >
+                  <h3 className="font-semibold text-gray-900 mb-3">Company X released an industry report on Y this week</h3>
+                  <p className="text-sm text-gray-600 mb-4">Key insights and developments in the industry</p>
+                  <div className="bg-white p-3 rounded border">
+                    <div className="w-full h-2 bg-gray-200 rounded mb-2"></div>
+                    <div className="w-3/4 h-2 bg-gray-200 rounded mb-2"></div>
+                    <div className="w-1/2 h-2 bg-gray-200 rounded"></div>
+                  </div>
+                </motion.div>
+              </div>
             </div>
           </div>
         </div>
@@ -78,13 +99,8 @@ export default function IntroScene({ onNext }: IntroSceneProps) {
               <span className="text-sm">Save</span>
             </button>
           </div>
-          <button className="text-gray-600 hover:bg-gray-200 p-1 rounded transition-colors">
-            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
-            </svg>
-          </button>
         </div>
       </div>
     </Scene>
   )
-} 
+}

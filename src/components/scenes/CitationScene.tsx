@@ -1,10 +1,25 @@
+import { motion } from "framer-motion"
 import Scene from "./Scene"
 
-interface IntroSceneProps {
-  onNext?: () => void
+const citationVariants = {
+  initial: { scale: 0.8, opacity: 0 },
+  animate: { 
+    scale: 1, 
+    opacity: 1,
+    transition: { delay: 0.5, duration: 0.8, ease: "easeOut" }
+  }
 }
 
-export default function IntroScene({ onNext }: IntroSceneProps) {
+const numberVariants = {
+  initial: { scale: 0, opacity: 0 },
+  animate: { 
+    scale: 1, 
+    opacity: 1,
+    transition: { delay: 1.2, duration: 0.6, type: "spring", stiffness: 200 }
+  }
+}
+
+export default function CitationScene() {
   return (
     <Scene>
       <div className="bg-white border border-gray-200 rounded-md shadow-sm hover:shadow-md transition-shadow duration-200 w-full max-w-4xl">
@@ -48,10 +63,29 @@ export default function IntroScene({ onNext }: IntroSceneProps) {
           {/* Main Content */}
           <div className="flex-1 p-4">
             <div className="text-gray-900">
-              <h2 className="text-3xl font-semibold mb-4">Tell us what you&apos;re working on</h2>
-              <p className="text-lg text-gray-700">
-                We&apos;ll reach out to understand your focus, goals, and what insights matter most to you.
-              </p>
+              <h2 className="text-2xl font-semibold mb-4">Scientific research that has hit key citation milestones that week</h2>
+              
+              <div className="flex justify-center">
+                <motion.div
+                  variants={citationVariants}
+                  initial="initial"
+                  animate="animate"
+                  className="bg-blue-50 p-6 rounded-lg border-2 border-blue-200 text-center"
+                >
+                  <h3 className="font-semibold text-gray-900 mb-3">Breakthrough Paper Title</h3>
+                  <p className="text-sm text-gray-600 mb-4">Authors et al. • Nature • 2023</p>
+                  
+                  <motion.div
+                    variants={numberVariants}
+                    initial="initial"
+                    animate="animate"
+                    className="text-4xl font-bold text-blue-600"
+                  >
+                    1,000
+                  </motion.div>
+                  <p className="text-sm text-gray-600 mt-2">citations reached this week!</p>
+                </motion.div>
+              </div>
             </div>
           </div>
         </div>

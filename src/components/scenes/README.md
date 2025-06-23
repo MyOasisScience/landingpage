@@ -1,71 +1,42 @@
-# Story Overlay System
+# Story Scenes
 
-This directory contains the new story overlay system that provides a smooth, scroll-triggered animation experience.
+This directory contains the individual scene components for the MyOasis.science landing page story section.
 
-## Architecture
+## Current Architecture
 
-The new system follows a clean separation of concerns:
+The story section uses a **sticky scrollytelling** pattern with Framer Motion's `useScroll` hook:
 
-### Core Components
+- **`StorySection.tsx`** - The main container that manages scroll-based scene transitions
+- **Scene Components** - Individual scenes that render based on scroll progress
+- **Sticky Container** - Each scene is displayed in a sticky viewport that stays in place while scrolling
 
-- **`StoryTrigger.tsx`** - The Reddit-style card that users scroll to
-- **`StoryOverlay.tsx`** - The full-screen overlay that manages the story experience
-- **`useStoryController.ts`** - Zustand store for managing story state
+## Scene Flow
 
-### Scene Components
+1. **Scroll Detection**: `StorySection` uses `useScroll` to track scroll progress through the section
+2. **Scene Calculation**: Scroll progress (0-1) is mapped to scene indices (0-5)
+3. **Scene Rendering**: The active scene is rendered with `AnimatePresence` for smooth transitions
 
-- **`Scene.tsx`** - Base scene component with common animation variants
-- **`IntroScene.tsx`** - First scene: "Tell us what you're working on"
-- **`BuildScene.tsx`** - Second scene: Email notification and report generation
-- **`ComingSoonScene.tsx`** - Final scene: Placeholder for future features
+## Scene Components
 
-## How It Works
-
-1. **Trigger Detection**: `StoryTrigger` uses `useInView` to detect when the user scrolls to it
-2. **State Management**: `useStoryController` manages the global story mode state
-3. **Overlay Rendering**: `StoryOverlay` renders as a portal to avoid layout thrashing
-4. **Scene Navigation**: Keyboard (arrow keys, space, escape) and wheel events control scene progression
-5. **Smooth Transitions**: Each scene has consistent 0.8s duration animations with easeInOut
-
-## Key Improvements Over Previous System
-
-- **Better Performance**: Portal rendering prevents layout recalculation
-- **Cleaner State Management**: Centralized Zustand store
-- **Accessibility**: Proper ARIA labels and keyboard navigation
-- **Reduced Motion Support**: Respects user preferences
-- **Mobile Friendly**: Touch events and close button
-- **SEO Friendly**: Overlay only renders client-side
+- **`IntroScene.tsx`** - Introduction to how MyOasis.science works
+- **`BuildScene.tsx`** - Building your personalized newsletter
+- **`ResearchScene.tsx`** - Research and content curation process
+- **`CitationScene.tsx`** - Citation and source management
+- **`IndustryScene.tsx`** - Industry-specific customization
+- **`ComingSoonScene.tsx`** - Final call-to-action and coming soon message
 
 ## Usage
 
 ```tsx
-// In your page component
-import StoryTrigger from "@/components/StoryTrigger";
-import StoryOverlay from "@/components/StoryOverlay";
+import StorySection from "@/components/StorySection";
 
-export default function Page() {
-  return (
-    <>
-      {/* Your content */}
-      <StoryTrigger />
-      {/* More content */}
-      
-      {/* Overlay at root level */}
-      <StoryOverlay />
-    </>
-  );
-}
+// In your page component
+<StorySection />
 ```
 
-## Adding New Scenes
+## Technical Details
 
-1. Create a new scene component in `scenes/`
-2. Add it to the `sceneMap` array in `StoryOverlay.tsx`
-3. Update the scene count in `useStoryController.ts`
-
-## Animation Guidelines
-
-- Use consistent timing: 0.8s duration with easeInOut
-- Prefer GPU-friendly transforms (opacity, transform, clip-path)
-- Avoid width/height animations inside the overlay
-- Use `useReducedMotion()` to respect accessibility preferences 
+- **Section Height**: 6 viewport heights (one per scene)
+- **Sticky Positioning**: Top of viewport during scroll
+- **Scene Transitions**: Smooth fade transitions with `AnimatePresence`
+- **Scroll Progress**: 0-1 mapped to scene indices 0-5 

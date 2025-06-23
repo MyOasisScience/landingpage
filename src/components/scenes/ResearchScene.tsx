@@ -1,10 +1,17 @@
+import { motion } from "framer-motion"
 import Scene from "./Scene"
 
-interface IntroSceneProps {
-  onNext?: () => void
+const paperVariants = {
+  initial: { y: 50, opacity: 0, rotateY: -15 },
+  animate: { 
+    y: 0, 
+    opacity: 1, 
+    rotateY: 0,
+    transition: { delay: 0.5, duration: 0.8, ease: "easeOut" }
+  }
 }
 
-export default function IntroScene({ onNext }: IntroSceneProps) {
+export default function ResearchScene() {
   return (
     <Scene>
       <div className="bg-white border border-gray-200 rounded-md shadow-sm hover:shadow-md transition-shadow duration-200 w-full max-w-4xl">
@@ -48,10 +55,32 @@ export default function IntroScene({ onNext }: IntroSceneProps) {
           {/* Main Content */}
           <div className="flex-1 p-4">
             <div className="text-gray-900">
-              <h2 className="text-3xl font-semibold mb-4">Tell us what you&apos;re working on</h2>
-              <p className="text-lg text-gray-700">
-                We&apos;ll reach out to understand your focus, goals, and what insights matter most to you.
-              </p>
+              <h2 className="text-2xl font-semibold mb-4">Latest scientific research that has been released that week</h2>
+              
+              <div className="space-y-6">
+                {/* Paper 1 */}
+                <motion.div
+                  variants={paperVariants}
+                  initial="initial"
+                  animate="animate"
+                  className="bg-gray-50 p-4 rounded-lg border"
+                >
+                  <h3 className="font-semibold text-gray-900 mb-2">Paper Title 1</h3>
+                  <p className="text-sm text-gray-600">Authors et al. • Nature • Published this week</p>
+                </motion.div>
+
+                {/* Paper 2 */}
+                <motion.div
+                  variants={paperVariants}
+                  initial="initial"
+                  animate="animate"
+                  transition={{ delay: 0.8 }}
+                  className="bg-gray-50 p-4 rounded-lg border"
+                >
+                  <h3 className="font-semibold text-gray-900 mb-2">Paper Title 2</h3>
+                  <p className="text-sm text-gray-600">Authors et al. • Science • Published this week</p>
+                </motion.div>
+              </div>
             </div>
           </div>
         </div>
@@ -87,4 +116,4 @@ export default function IntroScene({ onNext }: IntroSceneProps) {
       </div>
     </Scene>
   )
-} 
+}

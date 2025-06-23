@@ -3,10 +3,13 @@ import { useRef, useState } from "react"
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "framer-motion"
 import IntroScene from "./scenes/IntroScene"
 import BuildScene from "./scenes/BuildScene"
+import ResearchScene from "./scenes/ResearchScene"
+import CitationScene from "./scenes/CitationScene"
+import IndustryScene from "./scenes/IndustryScene"
 import ComingSoonScene from "./scenes/ComingSoonScene"
 
-const scenes = [IntroScene, BuildScene, ComingSoonScene] as const
-const SECTION_H = scenes.length    // 3 → 300vh
+const scenes = [IntroScene, BuildScene, ResearchScene, CitationScene, IndustryScene, ComingSoonScene] as const
+const SECTION_H = scenes.length    // 6 → 600vh
 
 export default function StorySection() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -37,11 +40,10 @@ export default function StorySection() {
       {/* Sticky viewport */}
       <div className="sticky top-0 h-screen flex items-center justify-center">
         <motion.div
-          layoutId="card"       // matches the Reddit card → morphs on entry
-          className="w-full max-w-4xl bg-neutral-800 rounded-xl p-8 text-white"
+          className="w-full max-w-4xl"
         >
           <AnimatePresence mode="wait">
-            <ActiveScene key={scene} /> {/* fade/scale handled inside Scene wrapper */}
+            <ActiveScene key={scene} />
           </AnimatePresence>
         </motion.div>
       </div>

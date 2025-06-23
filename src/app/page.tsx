@@ -7,9 +7,7 @@ import ClientSubheadingWrapper from "@/components/ClientSubheadingWrapper";
 import TrustedBy from "@/components/trusted-by";
 import RedditCard from "@/components/reddit-card";
 import { PaymentCard } from "@/components/payment-card";
-import StoryTrigger from "@/components/StoryTrigger";
 import StorySection from "@/components/StorySection";
-
 
 export default function Home() {
   return (
@@ -66,18 +64,6 @@ export default function Home() {
           comments={23}
         >
           <ClientSubheadingWrapper />
-        </RedditCard>
-
-        {/* Story Trigger */}
-        <RedditCard 
-          title=""
-          subreddit="r/HowItWorks"
-          author="MyOasis.science"
-          timestamp="15 minutes ago"
-          upvotes={1567}
-          comments={89}
-        >
-          <StoryTrigger />
         </RedditCard>
       </div>
 
