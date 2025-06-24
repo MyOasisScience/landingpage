@@ -28,7 +28,7 @@ export default function ReadAndRefineScene({ scrollProgress = 0 }: ReadAndRefine
             </div>
             <div className="flex flex-col">
               <div className="flex items-center space-x-1">
-                <span className="text-sm font-medium text-gray-900">r/HowItWorks</span>
+                <span className="text-sm font-medium text-gray-900">HowItWorks</span>
               </div>
             </div>
           </div>

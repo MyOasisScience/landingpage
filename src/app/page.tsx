@@ -19,14 +19,14 @@ export default function Home() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const subredditSections = [
-    { name: "r/hero", id: "hero" },
-    { name: "r/subheading", id: "subheading" },
-    { name: "r/CTA", id: "cta-card" },
-    { name: "r/TrustedBy", id: "trustedby" },
-    { name: "r/AMA", id: "ama" },
-    { name: "r/Oasis4client", id: "oasis4client" },
-    { name: "r/CTA2", id: "cta2" },
-    { name: "r/Meme", id: "meme" },
+    { name: "hero", id: "hero" },
+    { name: "subheading", id: "subheading" },
+    { name: "CTA", id: "cta-card" },
+    { name: "TrustedBy", id: "trustedby" },
+    { name: "AMA", id: "ama" },
+    { name: "Oasis4client", id: "oasis4client" },
+    { name: "CTA2", id: "cta2" },
+    { name: "Meme", id: "meme" },
   ];
 
   const scrollToSection = (id: string) => {
@@ -181,7 +181,7 @@ export default function Home() {
         <RedditCard 
           id="hero"
           title=""
-          subreddit="r/hero"
+          subreddit="hero"
           subredditImage="/images/Hero.webp"
           author="MyOasis.science"
           timestamp="2 hours ago"
@@ -195,7 +195,7 @@ export default function Home() {
         {/* Client Subheading */}
         <RedditCard 
           id="subheading"
-          subreddit="r/subheading"
+          subreddit="subheading"
           subredditImage="/images/subheading.jpg"
           author="MyOasis.science"
           timestamp="1 hour ago"
@@ -215,7 +215,7 @@ export default function Home() {
         <RedditCard 
           id="cta-card"
           title=""
-          subreddit="r/CTA"
+          subreddit="CTA"
           subredditImage="/images/man_calling.jpg"
           author="MyOasis.science"
           timestamp="30 minutes ago"
@@ -231,7 +231,7 @@ export default function Home() {
         <RedditCard 
           id="trustedby"
           title=""
-          subreddit="r/TrustedBy"
+          subreddit="TrustedBy"
           subredditImage="/images/logocollage.jpg"
           author="MyOasis.science"
           timestamp="45 minutes ago"
@@ -245,7 +245,7 @@ export default function Home() {
         <RedditCard 
           id="ama"
           title="About Our Mission"
-          subreddit="r/AMA"
+          subreddit="AMA"
           subredditImage="/images/AMA.png"
           author="MyOasis.science"
           timestamp="10 minutes ago"
@@ -261,7 +261,7 @@ export default function Home() {
         <RedditCard 
           id="oasis4client"
           title="Get in Touch"
-          subreddit="r/Oasis4client"
+          subreddit="Oasis4client"
           subredditImage="/images/4.png"
           author="MyOasis.science"
           timestamp="5 minutes ago"
@@ -277,7 +277,7 @@ export default function Home() {
         <RedditCard 
           id="cta2"
           title=""
-          subreddit="r/CTA2"
+          subreddit="CTA2"
           subredditImage="/images/man_calling.jpg"
           author="MyOasis.science"
           timestamp="27 minutes ago"
@@ -293,7 +293,7 @@ export default function Home() {
         <RedditCard 
           id="meme"
           title=""
-          subreddit="r/Meme"
+          subreddit="Meme"
           subredditImage="/images/meme.png"
           author="MyOasis.science"
           timestamp="1 minute ago"
