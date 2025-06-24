@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import AnimatedText from "@/components/animations/animated-text";
 import "react-tooltip/dist/react-tooltip.css";
@@ -12,22 +12,29 @@ import TrustedBy from "@/components/trusted-by";
 import RedditCard from "@/components/reddit-card";
 import { PaymentCard } from "@/components/payment-card";
 import { PaymentCard as CTA2PaymentCard } from "@/components/CTA2";
-import StorySection from "@/components/StorySection";
+import HowItWorksCard from "@/components/HowItWorksCard";
 
 export default function Home() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
 
   const subredditSections = [
-    { name: "hero", id: "hero" },
-    { name: "subheading", id: "subheading" },
-    { name: "CTA", id: "cta-card" },
-    { name: "TrustedBy", id: "trustedby" },
-    { name: "AMA", id: "ama" },
-    { name: "Oasis4client", id: "oasis4client" },
-    { name: "CTA2", id: "cta2" },
-    { name: "Meme", id: "meme" },
+    { name: "hero", id: "hero", image: "/images/Hero.png" },
+    { name: "subheading", id: "subheading", image: "/images/subheading.jpg" },
+    { name: "HowItWorks", id: "howitworks", image: "/images/howitworks.webp" },
+    { name: "CTA", id: "cta-card", image: "/images/man_calling.jpg" },
+    { name: "TrustedBy", id: "trustedby", image: "/images/logocollage.jpg" },
+    { name: "About", id: "about", image: "/images/AMA.png" },
+    { name: "Oasis4client", id: "oasis4client", image: "/images/4.png" },
+    { name: "CTA2", id: "cta2", image: "/images/man_calling.jpg" },
+    { name: "Meme", id: "meme", image: "/images/meme_logo.png" },
   ];
+
+  // Filter sections based on search term
+  const filteredSections = subredditSections.filter(section =>
+    section.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -36,6 +43,23 @@ export default function Home() {
     }
     setIsDropdownOpen(false);
     setIsMobileMenuOpen(false);
+    setSearchTerm(""); // Clear search term after selection
+  };
+
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchTerm(e.target.value);
+    setIsDropdownOpen(true);
+  };
+
+  const handleSearchFocus = () => {
+    setIsDropdownOpen(true);
+  };
+
+  const handleSearchBlur = () => {
+    setTimeout(() => {
+      setIsDropdownOpen(false);
+      setSearchTerm(""); // Clear search term when dropdown closes
+    }, 200);
   };
 
   return (
@@ -62,21 +86,29 @@ export default function Home() {
                 <input 
                   type="text" 
                   placeholder="Search r/MyOasis.science" 
+                  value={searchTerm}
                   className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#C6FF00] focus:border-transparent"
-                  onFocus={() => setIsDropdownOpen(true)}
-                  onBlur={() => setTimeout(() => setIsDropdownOpen(false), 200)}
+                  onFocus={handleSearchFocus}
+                  onBlur={handleSearchBlur}
+                  onChange={handleSearchChange}
                 />
                 {isDropdownOpen && (
                   <div className="absolute top-full left-0 right-0 bg-white border border-gray-200 rounded-md shadow-lg z-50 mt-1">
                     <div className="py-2">
-                      {subredditSections.map((section) => (
+                      {filteredSections.map((section) => (
                         <button
                           key={section.id}
                           onClick={() => scrollToSection(section.id)}
                           className="w-full px-4 py-3 text-left text-sm hover:bg-gray-50 flex items-center space-x-2"
                         >
-                          <div className="w-4 h-4 bg-[#C6FF00] rounded-full flex items-center justify-center">
-                            <span className="text-[#2B3D3B] text-xs font-bold">r</span>
+                          <div className="w-4 h-4 rounded-full overflow-hidden flex-shrink-0">
+                            <Image
+                              src={section.image}
+                              alt={`${section.name} icon`}
+                              width={16}
+                              height={16}
+                              className="w-full h-full object-cover"
+                            />
                           </div>
                           <span className="text-gray-700">{section.name}</span>
                         </button>
@@ -137,21 +169,29 @@ export default function Home() {
                   <input 
                     type="text" 
                     placeholder="Search r/MyOasis.science" 
+                    value={searchTerm}
                     className="w-full px-3 py-3 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#C6FF00] focus:border-transparent"
-                    onFocus={() => setIsDropdownOpen(true)}
-                    onBlur={() => setTimeout(() => setIsDropdownOpen(false), 200)}
+                    onFocus={handleSearchFocus}
+                    onBlur={handleSearchBlur}
+                    onChange={handleSearchChange}
                   />
                   {isDropdownOpen && (
                     <div className="absolute top-full left-0 right-0 bg-white border border-gray-200 rounded-md shadow-lg z-50 mt-1 max-h-60 overflow-y-auto">
                       <div className="py-2">
-                        {subredditSections.map((section) => (
+                        {filteredSections.map((section) => (
                           <button
                             key={section.id}
                             onClick={() => scrollToSection(section.id)}
                             className="w-full px-4 py-3 text-left text-sm hover:bg-gray-50 flex items-center space-x-2"
                           >
-                            <div className="w-4 h-4 bg-[#C6FF00] rounded-full flex items-center justify-center">
-                              <span className="text-[#2B3D3B] text-xs font-bold">r</span>
+                            <div className="w-4 h-4 rounded-full overflow-hidden flex-shrink-0">
+                              <Image
+                                src={section.image}
+                                alt={`${section.name} icon`}
+                                width={16}
+                                height={16}
+                                className="w-full h-full object-cover"
+                              />
                             </div>
                             <span className="text-gray-700">{section.name}</span>
                           </button>
@@ -182,7 +222,7 @@ export default function Home() {
           id="hero"
           title=""
           subreddit="hero"
-          subredditImage="/images/Hero.webp"
+          subredditImage="/images/Hero.png"
           author="MyOasis.science"
           timestamp="2 hours ago"
           upvotes={2047}
@@ -204,13 +244,21 @@ export default function Home() {
         >
           <ClientSubheadingWrapper />
         </RedditCard>
-      </div>
 
-      {/* Story Section - sticky scrollytelling */}
-      <StorySection />
+        {/* How It Works */}
+        <RedditCard 
+          id="howitworks"
+          title=""
+          subreddit="HowItWorks"
+          subredditImage="/images/howitworks.webp"
+          author="MyOasis.science"
+          timestamp="1 hour ago"
+          upvotes={1567}
+          comments={89}
+        >
+          <HowItWorksCard />
+        </RedditCard>
 
-      {/* Content after story */}
-      <div className="max-w-4xl mx-auto px-4 py-6">
         {/* CTA Card */}
         <RedditCard 
           id="cta-card"
@@ -243,9 +291,9 @@ export default function Home() {
 
         {/* About Us */}
         <RedditCard 
-          id="ama"
+          id="about"
           title="About Our Mission"
-          subreddit="AMA"
+          subreddit="About"
           subredditImage="/images/AMA.png"
           author="MyOasis.science"
           timestamp="10 minutes ago"
@@ -294,7 +342,7 @@ export default function Home() {
           id="meme"
           title=""
           subreddit="Meme"
-          subredditImage="/images/meme.png"
+          subredditImage="/images/meme_logo.png"
           author="MyOasis.science"
           timestamp="1 minute ago"
           upvotes={1337}
