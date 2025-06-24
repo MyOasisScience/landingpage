@@ -124,9 +124,6 @@ export default function HowItWorksCard() {
 
       {/* Collapsible Sections */}
       <div className="border border-gray-200 rounded-lg overflow-hidden bg-gray-50/30">
-        <div className="bg-gray-100 px-4 py-2 border-b border-gray-200">
-          <p className="text-sm text-gray-800 font-medium">Click any section below to learn more</p>
-        </div>
         <CollapsibleSection
           title="Stay on top of new research"
           isOpen={openSections["Stay on top of new research"]}
