@@ -130,7 +130,7 @@ export default function HowItWorksCard() {
           onToggle={() => toggleSection("Stay on top of new research")}
         >
           <div className="text-gray-800">
-            <p className="text-sm text-gray-800 leading-relaxed mb-4">We surface the most relevant new papers and preprints in your field.</p>
+            <p className="text-sm text-gray-800 leading-relaxed mb-4">We highlight the latest papers and preprints that matter to you.</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               <div>
                 <div className="relative w-full aspect-[4/3] sm:aspect-[3/2] bg-gradient-to-br from-white to-gray-100 border border-gray-200 shadow-md rounded-lg overflow-hidden hover:scale-[1.02] transition-transform">

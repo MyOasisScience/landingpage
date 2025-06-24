@@ -21,13 +21,13 @@ export default function Home() {
 
   const subredditSections = [
     { name: "hero", id: "hero", image: "/images/Hero.png" },
-    { name: "subheading", id: "subheading", image: "/images/subheading.jpg" },
+    { name: "whoit'sfor", id: "subheading", image: "/images/subheading.jpg" },
     { name: "HowItWorks", id: "howitworks", image: "/images/howitworks.webp" },
-    { name: "CTA", id: "cta-card", image: "/images/man_calling.jpg" },
+    { name: "CallToAction", id: "cta-card", image: "/images/man_calling.jpg" },
     { name: "TrustedBy", id: "trustedby", image: "/images/logocollage.jpg" },
     { name: "About", id: "about", image: "/images/AMA.png" },
     { name: "Oasis4client", id: "oasis4client", image: "/images/4.png" },
-    { name: "CTA2", id: "cta2", image: "/images/man_calling.jpg" },
+    { name: "CallToAction2", id: "cta2", image: "/images/man_calling.jpg" },
     { name: "Meme", id: "meme", image: "/images/meme_logo.png" },
   ];
 
@@ -85,7 +85,7 @@ export default function Home() {
               <div className="max-w-md relative w-full">
                 <input 
                   type="text" 
-                  placeholder="Search r/MyOasis.science" 
+                  placeholder="Jump to a section" 
                   value={searchTerm}
                   className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#C6FF00] focus:border-transparent"
                   onFocus={handleSearchFocus}
@@ -168,7 +168,7 @@ export default function Home() {
                 <div className="relative">
                   <input 
                     type="text" 
-                    placeholder="Search r/MyOasis.science" 
+                    placeholder="Jump to a section" 
                     value={searchTerm}
                     className="w-full px-3 py-3 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#C6FF00] focus:border-transparent"
                     onFocus={handleSearchFocus}
@@ -263,7 +263,7 @@ export default function Home() {
         <RedditCard 
           id="cta-card"
           title=""
-          subreddit="CTA"
+          subreddit="CallToAction"
           subredditImage="/images/man_calling.jpg"
           author="MyOasis.science"
           timestamp="30 minutes ago"
@@ -325,7 +325,7 @@ export default function Home() {
         <RedditCard 
           id="cta2"
           title=""
-          subreddit="CTA2"
+          subreddit="CallToAction2"
           subredditImage="/images/man_calling.jpg"
           author="MyOasis.science"
           timestamp="27 minutes ago"
@@ -335,28 +335,6 @@ export default function Home() {
           <AnimatedText>
             <CTA2PaymentCard />
           </AnimatedText>
-        </RedditCard>
-
-        {/* Meme Card */}
-        <RedditCard 
-          id="meme"
-          title=""
-          subreddit="Meme"
-          subredditImage="/images/meme_logo.png"
-          author="MyOasis.science"
-          timestamp="1 minute ago"
-          upvotes={1337}
-          comments={42}
-        >
-          <div className="flex justify-center">
-            <Image 
-              src="/images/meme.png" 
-              alt="Meme" 
-              width={500}
-              height={300}
-              className="max-w-full h-auto rounded-lg"
-            />
-          </div>
         </RedditCard>
       </div>
     </div>
