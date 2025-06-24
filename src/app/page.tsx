@@ -22,13 +22,12 @@ export default function Home() {
   const subredditSections = [
     { name: "hero", id: "hero", image: "/images/Hero.png" },
     { name: "whoit'sfor", id: "subheading", image: "/images/subheading.jpg" },
-    { name: "HowItWorks", id: "howitworks", image: "/images/howitworks.webp" },
-    { name: "CallToAction", id: "cta-card", image: "/images/man_calling.jpg" },
-    { name: "TrustedBy", id: "trustedby", image: "/images/logocollage.jpg" },
-    { name: "About", id: "about", image: "/images/AMA.png" },
-    { name: "Oasis4client", id: "oasis4client", image: "/images/4.png" },
-    { name: "CallToAction2", id: "cta2", image: "/images/man_calling.jpg" },
-    { name: "Meme", id: "meme", image: "/images/meme_logo.png" },
+    { name: "howitworks", id: "howitworks", image: "/images/howitworks.webp" },
+    { name: "calltoaction", id: "cta-card", image: "/images/man_calling.jpg" },
+    { name: "trustedby", id: "trustedby", image: "/images/logocollage.jpg" },
+    { name: "about", id: "about", image: "/images/AMA.png" },
+    { name: "oasis4client", id: "oasis4client", image: "/images/4.png" },
+    { name: "calltoaction2", id: "cta2", image: "/images/man_calling.jpg" },
   ];
 
   // Filter sections based on search term
@@ -235,7 +234,7 @@ export default function Home() {
         {/* Client Subheading */}
         <RedditCard 
           id="subheading"
-          subreddit="subheading"
+          subreddit="whoit'sfor"
           subredditImage="/images/subheading.jpg"
           author="MyOasis.science"
           timestamp="1 hour ago"
@@ -249,7 +248,7 @@ export default function Home() {
         <RedditCard 
           id="howitworks"
           title=""
-          subreddit="HowItWorks"
+          subreddit="howitworks"
           subredditImage="/images/howitworks.webp"
           author="MyOasis.science"
           timestamp="1 hour ago"
@@ -263,7 +262,7 @@ export default function Home() {
         <RedditCard 
           id="cta-card"
           title=""
-          subreddit="CallToAction"
+          subreddit="calltoaction"
           subredditImage="/images/man_calling.jpg"
           author="MyOasis.science"
           timestamp="30 minutes ago"
@@ -279,7 +278,7 @@ export default function Home() {
         <RedditCard 
           id="trustedby"
           title=""
-          subreddit="TrustedBy"
+          subreddit="trustedby"
           subredditImage="/images/logocollage.jpg"
           author="MyOasis.science"
           timestamp="45 minutes ago"
@@ -293,7 +292,7 @@ export default function Home() {
         <RedditCard 
           id="about"
           title="About Our Mission"
-          subreddit="About"
+          subreddit="about"
           subredditImage="/images/AMA.png"
           author="MyOasis.science"
           timestamp="10 minutes ago"
@@ -309,7 +308,7 @@ export default function Home() {
         <RedditCard 
           id="oasis4client"
           title="Get in Touch"
-          subreddit="Oasis4client"
+          subreddit="oasis4client"
           subredditImage="/images/4.png"
           author="MyOasis.science"
           timestamp="5 minutes ago"
@@ -325,7 +324,7 @@ export default function Home() {
         <RedditCard 
           id="cta2"
           title=""
-          subreddit="CallToAction2"
+          subreddit="calltoaction2"
           subredditImage="/images/man_calling.jpg"
           author="MyOasis.science"
           timestamp="27 minutes ago"
