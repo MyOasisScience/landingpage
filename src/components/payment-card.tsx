@@ -65,6 +65,16 @@ export function PaymentCard() {
           </ul>
         </div>
 
+        {/* Launch Info */}
+        <div className="max-w-md mx-auto mb-6 text-center">
+          <p className="text-gray-800 text-sm mb-2">
+            🧪 We&apos;ll launch v1 when we hit 50 paid signups.
+          </p>
+          <p className="text-gray-800 text-sm">
+            🚀 Founding membership is limited to the first 250 people — after that, prices go up.
+          </p>
+        </div>
+
         {/* Plan Selection and CTA Button */}
         <div className="flex flex-col items-center gap-4 mb-4">
           <div className="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
