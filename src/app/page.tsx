@@ -226,7 +226,6 @@ export default function Home() {
           timestamp="2 hours ago"
           upvotes={2047}
           comments={156}
-          isSticky={true}
         >
           <Hero />
         </RedditCard>
