@@ -20,13 +20,13 @@ export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
 
   const subredditSections = [
-    { name: "hero", id: "hero", image: "/images/Hero.png" },
-    { name: "whoit'sfor", id: "subheading", image: "/images/subheading.jpg" },
+    { name: "title", id: "hero", image: "/images/Hero.png" },
+    { name: "who", id: "subheading", image: "/images/subheading.jpg" },
     { name: "howitworks", id: "howitworks", image: "/images/howitworks.webp" },
     { name: "calltoaction", id: "cta-card", image: "/images/man_calling.jpg" },
     { name: "trustedby", id: "trustedby", image: "/images/logocollage.jpg" },
     { name: "about", id: "about", image: "/images/AMA.png" },
-    { name: "oasis4client", id: "oasis4client", image: "/images/4.png" },
+    { name: "contact", id: "oasis4client", image: "/images/4.png" },
     { name: "calltoaction2", id: "cta2", image: "/images/man_calling.jpg" },
   ];
 
@@ -220,7 +220,7 @@ export default function Home() {
         <RedditCard 
           id="hero"
           title=""
-          subreddit="hero"
+          subreddit="title"
           subredditImage="/images/Hero.png"
           author="MyOasis.science"
           timestamp="2 hours ago"
@@ -234,7 +234,7 @@ export default function Home() {
         {/* Client Subheading */}
         <RedditCard 
           id="subheading"
-          subreddit="whoit'sfor"
+          subreddit="who"
           subredditImage="/images/subheading.jpg"
           author="MyOasis.science"
           timestamp="1 hour ago"
@@ -308,7 +308,7 @@ export default function Home() {
         <RedditCard 
           id="oasis4client"
           title="Get in Touch"
-          subreddit="oasis4client"
+          subreddit="contact"
           subredditImage="/images/4.png"
           author="MyOasis.science"
           timestamp="5 minutes ago"
