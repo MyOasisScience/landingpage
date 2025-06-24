@@ -13,7 +13,6 @@ interface RedditCardProps {
   timestamp?: string;
   upvotes?: number;
   comments?: number;
-  isSticky?: boolean;
   className?: string;
   id?: string;
 }
@@ -23,7 +22,6 @@ export default function RedditCard({
   title,
   subreddit = "MyOasis.science",
   subredditImage,
-  isSticky = false,
   className = "",
   id
 }: RedditCardProps) {
@@ -57,11 +55,6 @@ export default function RedditCard({
             <div className="flex flex-col">
               <div className="flex items-center space-x-1">
                 <span className="text-sm font-medium text-gray-900">{subreddit}</span>
-                {isSticky && (
-                  <span className="text-xs bg-green-100 text-green-800 px-1.5 py-0.5 rounded-full">
-                    STICKY
-                  </span>
-                )}
               </div>
             </div>
           </div>
