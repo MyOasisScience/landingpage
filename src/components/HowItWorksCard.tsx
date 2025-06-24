@@ -359,7 +359,7 @@ export default function HowItWorksCard() {
                   for a climate journalist
                 </div>
                 <p className="text-purple-800 text-sm font-medium leading-relaxed">
-                  <strong>Investigate how "strategic disruption" narratives are undermining trust in climate solutions</strong>
+                  <strong>Investigate how &ldquo;strategic disruption&rdquo; narratives are undermining trust in climate solutions</strong>
                   <br />
                   → Emerging evidence shows false claims now target renewables and green tech—not climate science itself—quietly stalling progress and reshaping public opinion.
                 </p>
