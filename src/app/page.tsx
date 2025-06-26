@@ -26,7 +26,7 @@ export default function Home() {
     { name: "calltoaction", id: "cta-card", image: "/images/man_calling.jpg" },
     { name: "trustedby", id: "trustedby", image: "/images/logocollage.jpg" },
     { name: "about", id: "about", image: "/images/AMA.png" },
-    { name: "contact", id: "oasis4client", image: "/images/4.png" },
+    { name: "contact", id: "bref4client", image: "/images/4.png" },
     { name: "calltoaction2", id: "cta2", image: "/images/man_calling.jpg" },
   ];
 
@@ -71,12 +71,12 @@ export default function Home() {
             <div className="flex items-center space-x-2">
               <Image
                 src="/images/logo.png"
-                alt="MyOasis.science logo"
+                alt="bref.science logo"
                 width={32}
                 height={32}
                 className="w-8 h-8 object-contain"
               />
-              <span className="text-lg font-bold text-gray-900">MyOasis.science</span>
+              <span className="text-lg font-bold text-gray-900">bref.science</span>
             </div>
 
             {/* Desktop Navigation */}
@@ -222,7 +222,7 @@ export default function Home() {
           title=""
           subreddit="title"
           subredditImage="/images/Hero.png"
-          author="MyOasis.science"
+          author="bref.science"
           timestamp="2 hours ago"
           upvotes={2047}
           comments={156}
@@ -235,7 +235,7 @@ export default function Home() {
           id="subheading"
           subreddit="who"
           subredditImage="/images/subheading.jpg"
-          author="MyOasis.science"
+          author="bref.science"
           timestamp="1 hour ago"
           upvotes={892}
           comments={23}
@@ -249,7 +249,7 @@ export default function Home() {
           title=""
           subreddit="howitworks"
           subredditImage="/images/howitworks.webp"
-          author="MyOasis.science"
+          author="bref.science"
           timestamp="1 hour ago"
           upvotes={1567}
           comments={89}
@@ -263,7 +263,7 @@ export default function Home() {
           title=""
           subreddit="calltoaction"
           subredditImage="/images/man_calling.jpg"
-          author="MyOasis.science"
+          author="bref.science"
           timestamp="30 minutes ago"
           upvotes={1234}
           comments={89}
@@ -279,7 +279,7 @@ export default function Home() {
           title=""
           subreddit="trustedby"
           subredditImage="/images/logocollage.jpg"
-          author="MyOasis.science"
+          author="bref.science"
           timestamp="45 minutes ago"
           upvotes={567}
           comments={12}
@@ -293,7 +293,7 @@ export default function Home() {
           title="About Our Mission"
           subreddit="about"
           subredditImage="/images/AMA.png"
-          author="MyOasis.science"
+          author="bref.science"
           timestamp="10 minutes ago"
           upvotes={432}
           comments={18}
@@ -305,11 +305,11 @@ export default function Home() {
 
         {/* Contact Us */}
         <RedditCard 
-          id="oasis4client"
+          id="bref4client"
           title="Get in Touch"
           subreddit="contact"
           subredditImage="/images/4.png"
-          author="MyOasis.science"
+          author="bref.science"
           timestamp="5 minutes ago"
           upvotes={298}
           comments={7}
@@ -325,7 +325,7 @@ export default function Home() {
           title=""
           subreddit="calltoaction2"
           subredditImage="/images/man_calling.jpg"
-          author="MyOasis.science"
+          author="bref.science"
           timestamp="27 minutes ago"
           upvotes={869}
           comments={1}

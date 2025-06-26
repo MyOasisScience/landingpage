@@ -20,7 +20,7 @@ interface RedditCardProps {
 export default function RedditCard({
   children,
   title,
-  subreddit = "MyOasis.science",
+  subreddit = "bref.science",
   subredditImage,
   className = "",
   id

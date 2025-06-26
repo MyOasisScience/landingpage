@@ -1,4 +1,4 @@
-# Oasis Landing Page
+# Bref Landing Page
 
 ## 🛠 Tech Stack
 

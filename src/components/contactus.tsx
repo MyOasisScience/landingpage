@@ -7,10 +7,10 @@ export default function ContactUs() {
         <p className="text-sm text-gray-800 leading-relaxed">
           Any questions please feel free to reach out on{" "}
           <a 
-            href="mailto:hello@myoasis.science"
+            href="mailto:hello@bref.science"
             className="text-gray-900 hover:text-gray-700 underline decoration-[#C6FF00] hover:decoration-[#B2E600] transition-colors"
           >
-            hello@myoasis.science
+            hello@bref.science
           </a>
         </p>
       </div>

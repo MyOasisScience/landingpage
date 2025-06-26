@@ -15,7 +15,7 @@
   --color-background: #F3F2ED;  /* Soft Sand */
   --color-text: #444444;        /* Graphite Gray */
   --color-heading: #2B3D3B;     /* Deep Forest Green */
-  --color-accent: #3A86FF;      /* Oasis Blue */
+  --color-accent: #3A86FF;      /* Bref Blue */
   --color-secondary: #A7DAD8;   /* Mint */
   
   /* Map to existing color system */
@@ -23,7 +23,7 @@
   --foreground: 0 0% 27%;       /* Graphite Gray */
   --primary: 180 30% 25%;       /* Deep Forest Green */
   --secondary: 177 40% 80%;     /* Mint */
-  --accent: 217 100% 61%;       /* Oasis Blue */
+  --accent: 217 100% 61%;       /* Bref Blue */
   
   --color-brand-50: oklch(var(--brand-50));
   --color-brand-100: oklch(var(--brand-100));
