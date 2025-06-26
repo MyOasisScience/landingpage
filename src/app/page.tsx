@@ -76,7 +76,7 @@ export default function Home() {
                 height={32}
                 className="w-8 h-8 object-contain"
               />
-              <span className="text-lg font-bold text-gray-900">bref.science</span>
+              <span className="text-lg font-bold text-gray-900">bref</span>
             </div>
 
             {/* Desktop Navigation */}
